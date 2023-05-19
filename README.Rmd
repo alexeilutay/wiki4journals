@@ -57,22 +57,19 @@ date: '2023-05-18'
 
 Возвращает json с ID последней правки и подробным wiki-text HTML (infobox, ссылки с библиографическими деталями и т.д.).
 
-> https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-```
+> [`https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ`](https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ)
 
 **MWA**
 
 Возвращает в JSON текст, языковые версии, категории, ссылки на страницы Wikipedia, ссылка на внешние страницы, перечень изображений, секций, шаблонов, интер-вики ссылок и wikibase item (в properties)
 
-> https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&format=json
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&format=json)
 
 **WM**
 
 Возвращает namespace, Wikibase ID, название, thumbnail, original image, последнюю правку с временной отметкой и ID, аннотацию (текст и HTML). 
 
-> https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ 
+> [`https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ`](https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ) 
 
 ***
 
@@ -80,7 +77,7 @@ date: '2023-05-18'
 
 **MWA**
 
-> https://en.wikipedia.org/w/api.php?action=query&prop=pageterms&titles=The%20BMJ&format=json
+> [`https://en.wikipedia.org/w/api.php?action=query&prop=pageterms&titles=The%20BMJ&format=json`](https://en.wikipedia.org/w/api.php?action=query&prop=pageterms&titles=The%20BMJ&format=json)
 
 ***
 
@@ -90,13 +87,22 @@ date: '2023-05-18'
 
 возвращает только названия страниц
 
-> https://en.wikipedia.org/w/rest.php/v1/page/The_Lancet/links/language
+> [`https://en.wikipedia.org/w/rest.php/v1/page/The_Lancet/links/language`](https://en.wikipedia.org/w/rest.php/v1/page/The_Lancet/links/language)
 
 **MWA**
 
 возвращает pageid для страниц объекта и полные URL на страницы языковых версий
 
-> https://en.wikipedia.org/w/api.php?action=query&titles=The_Lancet&prop=langlinks&format=json&llprop=url&lllimit=500
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The_Lancet&prop=langlinks&format=json&llprop=url&lllimit=500`](https://en.wikipedia.org/w/api.php?action=query&titles=The_Lancet&prop=langlinks&format=json&llprop=url&lllimit=500)
+
+***
+
+### Извлечь категории статьи
+
+**MWA**
+
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=categories&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=categories&format=json)
+
 
 ***
 
@@ -106,13 +112,13 @@ date: '2023-05-18'
 
 возвращает последнюю правку и имя последнего пользователя
 
-> https://ru.wikipedia.org/api/rest_v1/page/title/Доклады Академии наук
+> [`https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук`](https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук)
 
 **WP**
 
 возвращает историю правок с id изменения, временем правки, данными о создателе (id, name) и размером правок (delta).
 
-> https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history)
 
 Дополнив запрос выражением *?older_than=939967546* (или *?newer_than=1018790892*) можно получить более ранние (или поздние) правки (вместо цифр подставлять id конкретной правки)
 
@@ -123,12 +129,26 @@ date: '2023-05-18'
 - bot: правки, сделанные ботами, 
 - minor: правки, отмеченные как незначительные (minor edits)
 
-> https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&filter=anonymous
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&filter=anonymous`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&filter=anonymous)
 
 **Количество правок**
 
-> https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits
-> https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&to=97918317
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits)
+
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&to=97918317`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&to=97918317)
+
+***
+
+### Список тех, кто правил страницу
+
+**MWA**
+
+[Информация](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Bcontributors)
+
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=contributors&pclimit=200&pcgroup=bot&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=contributors&pclimit=200&pcgroup=bot&format=json)
+
+
+***
 
 ### Получить Wikidata ID по названию статьи в Wikipedia
 
@@ -136,13 +156,13 @@ date: '2023-05-18'
 
 возвращает Wikibase ID (aka Wikidata ID) и wikibase-shortdesc (если есть)
 
-> https://ru.wikipedia.org/w/api.php?action=query&prop=pageprops&format=json&titles=Криосфера_Земли
+> [`https://ru.wikipedia.org/w/api.php?action=query&prop=pageprops&format=json&titles=Криосфера_Земли`](https://ru.wikipedia.org/w/api.php?action=query&prop=pageprops&format=json&titles=Криосфера_Земли)
 
 **WP**
 
 возвращает информацию о странице, в которой есть поле wikibase_item 
 
-> https://ru.wikipedia.org/api/rest_v1/page/summary/Криосфера_Земли
+> [`https://ru.wikipedia.org/api/rest_v1/page/summary/Криосфера_Земли`](https://ru.wikipedia.org/api/rest_v1/page/summary/Криосфера_Земли)
 
 **WD**
 
@@ -169,7 +189,7 @@ SELECT ?lemma ?item WHERE {
 
 **MWA**
 
-> https://www.wikidata.org/w/api.php?action=wbgetentities&format=xml&props=sitelinks&ids=Q3453517
+> [`https://www.wikidata.org/w/api.php?action=wbgetentities&format=xml&props=sitelinks&ids=Q3453517`](https://www.wikidata.org/w/api.php?action=wbgetentities&format=xml&props=sitelinks&ids=Q3453517)
 
 Добавляя выражения вида *&sitefilter=enwiki* можно ограничить результаты определенным языком.
 
@@ -191,9 +211,9 @@ SELECT DISTINCT ?article WHERE {
 
 **WM**
 
-Сервис поддерживает также формат zotero и несколько других (mediawiki, wikibase). Цитируемый URL включает параметр oldid – идентификатор последней правки на момент цитирования! Обратите внимание на необходимость URL-кодирования гиперссылки страницы Wikipedia. 
+Сервис поддерживает также формат zotero и несколько других (mediawiki, wikibase). Цитируемый URL включает параметр oldid – идентификатор последней правки на момент цитирования! Обратите внимание на необходимость URL-кодирования гиперссылки страницы Wikipedia. Результат -- скачивание текстового файла с цитирование в выбранном формате.
 
-> https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики
+> [`https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики`](https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики)
 
 ###	Разделы статьи в Wikipedia
 
@@ -203,11 +223,57 @@ SELECT DISTINCT ?article WHERE {
 
 Возвращает перечень разделов страницы Wikipedia, их размер, порядковые номера и названия внутренних ссылок. 
 
-> https://en.wikipedia.org/w/api.php?action=parse&format=json&page=The%20BMJ&prop=sections
+> [`https://en.wikipedia.org/w/api.php?action=parse&format=json&page=The%20BMJ&prop=sections`](https://en.wikipedia.org/w/api.php?action=parse&format=json&page=The%20BMJ&prop=sections)
 
 Получив сведения из запроса выше, можно извлечь отдельные разделы в форматах wikitext или parsetree 
 
-> https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=wikitext|parsetree&section=5&format=json 
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=wikitext|parsetree&section=5&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=wikitext|parsetree&section=5&format=json) 
+
+***
+
+### Поиск статей в Wikipedia, цитирующих внешний web-сайт 
+
+**MWA**
+
+[Инструкция](https://www.mediawiki.org/wiki/API:Exturlusage)
+
+Можно искать ссылки только в статьях определенного типа, используя выражение *&eunamespace=...* и определенные значения (0 -- Wikipedia Page, 1 -- Talk:Page, 2 -- Профили пользователей, 3 -- личные User talk страницы).
+
+> [`https://ru.wikipedia.org/w/api.php?action=query&format=json&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0`](https://ru.wikipedia.org/w/api.php?action=query&format=json&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0)
+
+***
+
+### Поиск статей Wikipedia, цитирующих выбранную страницу Wikipedia 
+
+**MWA**
+
+[Инструкция](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Blinkshere)
+
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=linkshere&lhlimit=200&lhnamespace=0&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=linkshere&lhlimit=200&lhnamespace=0&format=json)
+
+***
+
+### Ссылки на другие статьи Wikipedia с выбранной страницы Wikipedia 
+
+**MWA**
+
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=links&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=links&format=json)
+
+***
+
+### Ссылки на внешние сайты с выбранной страницы Wikipedia 
+
+[Инструкция](https://www.mediawiki.org/wiki/API:Extlinks)
+
+**MWA**
+
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=extlinks&ellimit=500&elexpandurl=true&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=extlinks&ellimit=500&elexpandurl=true&format=json)
+
+Можно объединить ссылки с внутренними (на страницы Wikipedia), выбрав *prop=extlinks|links*.
+
+[Альтернативный способ](https://www.mediawiki.org/wiki/API:Parsing_wikitext)
+
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=externallinks&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=externallinks&format=json) 
 
 ***
 
