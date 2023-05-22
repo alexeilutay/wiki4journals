@@ -1,14 +1,14 @@
-API-Викисервисов для академических издателей
+Вики-сервисы для академических издателей
 ================
 Лутай А.В.
-2023-05-20
+2023-05-23
 
 -   [API и SPARQL интерфейсы](#api-и-sparql-интерфейсы)
-    -   [Wikipedia REST API (WP)](#wikipedia-rest-api-wp)
-    -   [Wikimedia REST API (WM)](#wikimedia-rest-api-wm)
-    -   [MediaWiki Action API (MWA)](#mediawiki-action-api-mwa)
-    -   [Wikidata API (WD)](#wikidata-api-wd)
-    -   [SPARQL](#sparql)
+    -   [MediaWiki Action API](#mediawiki-action-api)
+    -   [Wikipedia REST API](#wikipedia-rest-api)
+    -   [Wikimedia REST API](#wikimedia-rest-api)
+    -   [Wikidata API](#wikidata-api)
+    -   [Wikidata SPARQL](#wikidata-sparql)
 -   [Материалы на русском языке](#материалы-на-русском-языке)
 -   [Типовые задачи – сведения о
     статье](#типовые-задачи--сведения-о-статье)
@@ -78,50 +78,50 @@ API-Викисервисов для академических издателе�
         статей](#исследователи-цитировавшие-статьи-из-журнала-со-списком-цитирующих-и-процитированных-статей)
     -   [Статьи из журнала и цитирующие их организации и
         страны](#статьи-из-журнала-и-цитирующие-их-организации-и-страны)
-    -   [Лицензия](#лицензия)
+-   [Обратная связь](#обратная-связь)
+-   [Лицензия](#лицензия)
 
 ------------------------------------------------------------------------
 
 ## API и SPARQL интерфейсы
 
-### Wikipedia REST API (WP)
+#### MediaWiki Action API
+
+-   <https://www.mediawiki.org/wiki/API:Main_page>
+
+#### Wikipedia REST API
 
 -   <https://www.mediawiki.org/wiki/API:REST_API>
 -   <https://www.mediawiki.org/wiki/API:REST_API/Reference>
 
-**Перелистывание результатов**
+:fast_forward: Перелистывание результатов
 
 -   <https://www.mediawiki.org/wiki/API:Continue>
 
-### Wikimedia REST API (WM)
+#### Wikimedia REST API
 
 -   <https://en.wikipedia.org/api/rest_v1/#/>
 
 -   [Спецификация API в
     JSON](https://en.wikipedia.org/api/rest_v1/?spec)
 
-### MediaWiki Action API (MWA)
+#### Wikidata API
 
--   <https://www.mediawiki.org/wiki/API:Main_page>
+-   [Swagger API
+    документация](https://doc.wikimedia.org/Wikibase/master/js/rest-api/)
 
-### Wikidata API (WD)
-
-### SPARQL
+#### Wikidata SPARQL
 
 Примеры запросов в основной части будут сопровождаться гиперссылками,
-открывающими запрос в интерфейсе
-<a href="https://query.wikidata.org/" target="_blank">Wikidata Query
-Service</a>. Их также можно отправлять программными средствами с помощью
-специальных пакетов для R: <a href="https://github.com/TS404/WikidataR"
-target="_blank">WikidataR</a>, для Python: пакет
-<a href="https://github.com/dahlia/wikidata"
-target="_blank">Wikidata</a>,
-<a href="https://www.wikidata.org/wiki/Wikidata:Tools/For_programmers"
-target="_blank">другие примеры</a>).
+открывающими запрос в интерфейсе [Wikidata Query
+Service](https://query.wikidata.org/). Их также можно отправлять
+программными средствами с помощью специальных пакетов для R:
+[WikidataR](https://github.com/TS404/WikidataR), для :snake: : пакет
+[Wikidata](https://github.com/dahlia/wikidata), [другие
+примеры](https://www.wikidata.org/wiki/Wikidata:Tools/For_programmers)).
 
--   <a href="https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial/ru"
-    target="_blank">Руководство по использованию SPARQL (частично на русском
-    языке)</a>
+-   [Руководство по использованию SPARQL (частично на русском
+    языке)](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial/ru)
 
 -   <https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples>
 
@@ -131,189 +131,146 @@ target="_blank">другие примеры</a>).
 
 -   <https://wdqs-tutorial.toolforge.org/>
 
--   :boom: <a
-    href="https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/qotw"
-    target="_blank">Архив SPARQL запросов 2015-2022 из еженедельных
-    дайджестов)</a>
+-   [Архив SPARQL запросов 2015-2022 из еженедельных
+    дайджестов)](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/qotw)
+    :blue_book:
 
 ------------------------------------------------------------------------
 
 ## Материалы на русском языке
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
 **Базовые сведения:**
 
--   <a href="https://podpiska.rfbr.ru/materials/wikidata4journals/"
-    target="_blank">Сервис Викиданные для научных журналов</a>
-
--   <a
-    href="https://ru.wikisource.org/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0:%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5"
-    target="_blank">Статья “Викиданные” в Викитеке</a>
+-   [Статья “Викиданные” в
+    Викитеке](https://ru.wikisource.org/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0:%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5)
 
 **Популярным языком:**
 
--   Статья <a href="https://openriro.github.io/posts/wikidata-profile/"
-    target="_blank">“О профилях организаций в Wikidata”</a>, в которой
-    описываются приемы по описанию профиля научной организации в
-    Викиданных”
+-   Статья [“Сервис Викиданные для научных
+    журналов”](https://podpiska.rfbr.ru/materials/wikidata4journals/),
+    (2023).
 
--   Статья <a href="https://openriro.github.io/posts/wikidata-profile/"
-    target="_blank">“О профилях организаций в Wikidata”</a>, в которой
-    описываются приемы по описанию профиля научной организации в
-    Викиданных”
+-   Статья [“О профилях организаций в
+    Wikidata”](https://openriro.github.io/posts/wikidata-profile/),
+    (2022).
 
 -   Семинар “Работа с метаданными” (12.10.2022) от Наукометрического
-    центра ВШЭ. Видео YouTube,
-    <a href="https://youtu.be/XX6eT1ON4_I?t=1504" target="_blank">про
-    Викиданные с 25-ой минуты</a>.
+    центра ВШЭ. Видео YouTube, [про Викиданные с 25-ой
+    минуты](https://youtu.be/XX6eT1ON4_I?t=1504).
 
 **Для тех, кто готов пойти дальше:**
 
--   <a
-    href="https://ru.wikiversity.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85"
-    target="_blank">Курс Программирование Викиданных (ПетрГУ)</a>
+-   [Курс Программирование Викиданных
+    (ПетрГУ)](https://ru.wikiversity.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
+    :trophy:
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
 ## Типовые задачи – сведения о статье
 
-### Информация о статье в Wikipedia
+#### Информация о статье в Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**WP**
+**`Wikipedia REST API`**
 
 Возвращает json с ID последней правки и подробным wiki-text HTML
 (infobox, ссылки с библиографическими деталями и т.д.).
 
-> <a href="https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ"
-> target="_blank"><code>https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ</code></a>
+> [`https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ`](https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ)
 
-**MWA**
+**`MediaWiki Action API`**
 
 Возвращает в JSON текст, языковые версии, категории, ссылки на страницы
 Wikipedia, ссылка на внешние страницы, перечень изображений, секций,
 шаблонов, интер-вики ссылок и wikibase item (в properties)
 
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;format=json</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&format=json)
 
-**WM**
+**`Wikimedia REST API`**
 
 Возвращает namespace, Wikibase ID, название, thumbnail, original image,
 последнюю правку с временной отметкой и ID, аннотацию (текст и HTML).
 
-> <a href="https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ"
-> target="_blank"><code>https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ</code></a>
+> [`https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ`](https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Другие названия объекта статьи
+#### Другие названия объекта статьи
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**MWA**
-
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=query&amp;prop=pageterms&amp;titles=The%20BMJ&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=query&amp;prop=pageterms&amp;titles=The%20BMJ&amp;format=json</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=query&prop=pageterms&titles=The%20BMJ&format=json`](https://en.wikipedia.org/w/api.php?action=query&prop=pageterms&titles=The%20BMJ&format=json)
 
 ------------------------------------------------------------------------
 
-### Все языковые версии статьи в Wikipedia
+#### Все языковые версии статьи в Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**WP**
+**`Wikipedia REST API`**
 
 возвращает только названия страниц
 
-> <a
-> href="https://en.wikipedia.org/w/rest.php/v1/page/The_Lancet/links/language"
-> target="_blank"><code>https://en.wikipedia.org/w/rest.php/v1/page/The_Lancet/links/language</code></a>
+> [`https://en.wikipedia.org/w/rest.php/v1/page/The_Lancet/links/language`](https://en.wikipedia.org/w/rest.php/v1/page/The_Lancet/links/language)
 
-**MWA**
+**`MediaWiki Action API`**
 
 возвращает pageid для страниц объекта и полные URL на страницы языковых
 версий
 
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=query&amp;titles=The_Lancet&amp;prop=langlinks&amp;format=json&amp;llprop=url&amp;lllimit=500"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=query&amp;titles=The_Lancet&amp;prop=langlinks&amp;format=json&amp;llprop=url&amp;lllimit=500</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The_Lancet&prop=langlinks&format=json&llprop=url&lllimit=500`](https://en.wikipedia.org/w/api.php?action=query&titles=The_Lancet&prop=langlinks&format=json&llprop=url&lllimit=500)
 
 ------------------------------------------------------------------------
 
-### Извлечь категории статьи
+#### Извлечь категории статьи
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`MediaWiki Action API`**
 
-**MWA**
-
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=categories&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=categories&amp;format=json</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=categories&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=categories&format=json)
 
 ------------------------------------------------------------------------
 
-### Извлечь разделы статьи в Wikipedia
+#### Извлечь разделы статьи в Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`MediaWiki Action API`**
 
-**MWA**
-
-<a href="https://www.mediawiki.org/wiki/API:Parsing_wikitext"
-target="_blank">Инструкция</a>
+[Инструкция](https://www.mediawiki.org/wiki/API:Parsing_wikitext)
 
 Возвращает перечень разделов страницы Wikipedia, их размер, порядковые
 номера и названия внутренних ссылок.
 
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=parse&amp;format=json&amp;page=The%20BMJ&amp;prop=sections"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=parse&amp;format=json&amp;page=The%20BMJ&amp;prop=sections</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=parse&format=json&page=The%20BMJ&prop=sections`](https://en.wikipedia.org/w/api.php?action=parse&format=json&page=The%20BMJ&prop=sections)
 
 Получив сведения из запроса выше, можно извлечь отдельные разделы в
 форматах wikitext или parsetree
 
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=wikitext%7Cparsetree&amp;section=5&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=wikitext|parsetree&amp;section=5&amp;format=json</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=wikitext|parsetree&section=5&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=wikitext%7Cparsetree&section=5&format=json)
 
 ------------------------------------------------------------------------
 
-### Получить Wikidata ID по названию статьи в Wikipedia
+#### Получить Wikidata ID по названию статьи в Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**MWA**
+**`MediaWiki Action API`**
 
 возвращает Wikibase ID (aka Wikidata ID) и wikibase-shortdesc (если
 есть)
 
-> <a
-> href="https://ru.wikipedia.org/w/api.php?action=query&amp;prop=pageprops&amp;format=json&amp;titles=Криосфера_Земли"
-> target="_blank"><code>https://ru.wikipedia.org/w/api.php?action=query&amp;prop=pageprops&amp;format=json&amp;titles=Криосфера_Земли</code></a>
+> [`https://ru.wikipedia.org/w/api.php?action=query&prop=pageprops&format=json&titles=Криосфера_Земли`](https://ru.wikipedia.org/w/api.php?action=query&prop=pageprops&format=json&titles=Криосфера_Земли)
 
-**WP**
+**`Wikipedia REST API`**
 
 возвращает информацию о странице, в которой есть поле wikibase_item
 
-> <a
-> href="https://ru.wikipedia.org/api/rest_v1/page/summary/Криосфера_Земли"
-> target="_blank"><code>https://ru.wikipedia.org/api/rest_v1/page/summary/Криосфера_Земли</code></a>
+> [`https://ru.wikipedia.org/api/rest_v1/page/summary/Криосфера_Земли`](https://ru.wikipedia.org/api/rest_v1/page/summary/Криосфера_Земли)
 
-**WD**
+**`Wikidata REST API`**
 
 возвращает все запрошенные элементы Wikidata. При запросе русскоязычной
 страницы необходимо заменить enwiki на ruwiki, можно также получать
 заголовки на нескольких языках (en\|ru).
 
-> <a
-> href="https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=json&amp;sites=ruwiki&amp;titles=Журнал_технической_физики&amp;props=info%7Clabels%7Cdescriptions%7Cclaims&amp;languages=en%7Cru"
-> target="_blank"><code>https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=json&amp;sites=ruwiki&amp;titles=Журнал_технической_физики&amp;props=info|labels|descriptions|claims&amp;languages=en|ru</code></a>
+> [`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&sites=ruwiki&titles=Журнал_технической_физики&props=info|labels|descriptions|claims&languages=en|ru`](https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&sites=ruwiki&titles=Журнал_технической_физики&props=info%7Clabels%7Cdescriptions%7Cclaims&languages=en%7Cru)
 
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ```
 SELECT ?lemma ?item WHERE {
@@ -324,26 +281,23 @@ SELECT ?lemma ?item WHERE {
 }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20%3Flemma%20%3Fitem%20WHERE%20%7B%0A%20%20VALUES%20%3Flemma%20%7B%22%D0%A3%D1%81%D0%BF%D0%B5%D1%85%D0%B8%20%D1%85%D0%B8%D0%BC%D0%B8%D0%B8%22%40ru%7D%0A%20%20%3Fsitelink%20schema%3Aabout%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3Aname%20%3Flemma.%0A%7D%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20%3Flemma%20%3Fitem%20WHERE%20%7B%0A%20%20VALUES%20%3Flemma%20%7B%22%D0%A3%D1%81%D0%BF%D0%B5%D1%85%D0%B8%20%D1%85%D0%B8%D0%BC%D0%B8%D0%B8%22%40ru%7D%0A%20%20%3Fsitelink%20schema%3Aabout%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3Aname%20%3Flemma.%0A%7D%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Найти страницы Wikipedia по Wikidata ID
+#### Найти страницы Wikipedia по Wikidata ID
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`MediaWiki Action API`**
 
-**MWA**
+> [`https://www.wikidata.org/w/api.php?action=wbgetentities&format=xml&props=sitelinks&ids=Q3453517`](https://www.wikidata.org/w/api.php?action=wbgetentities&format=xml&props=sitelinks&ids=Q3453517)
 
-> <a
-> href="https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=xml&amp;props=sitelinks&amp;ids=Q3453517"
-> target="_blank"><code>https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=xml&amp;props=sitelinks&amp;ids=Q3453517</code></a>
-
-Добавляя выражения вида *&sitefilter=enwiki* можно ограничить результаты
+Добавляя выражения вида `&sitefilter=enwiki` можно ограничить результаты
 определенным языком.
 
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ```
 SELECT DISTINCT ?article WHERE {
@@ -353,17 +307,16 @@ SELECT DISTINCT ?article WHERE {
 }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Farticle%20WHERE%20%7B%0A%20%20VALUES%20%3Fitem%20%7Bwd%3AQ3453517%7D%0A%20%20%3Farticle%20schema%3Aabout%20%3Fitem%3B%0A%20%20%20%20%20%20%20%20%20%20%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E%0A%7D%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Farticle%20WHERE%20%7B%0A%20%20VALUES%20%3Fitem%20%7Bwd%3AQ3453517%7D%0A%20%20%3Farticle%20schema%3Aabout%20%3Fitem%3B%0A%20%20%20%20%20%20%20%20%20%20%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E%0A%7D%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Цитировать статью Wikipedia в формате bibtex
+#### Цитировать статью Wikipedia в формате bibtex
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**WM**
+**`Wikimedia REST API`**
 
 Сервис поддерживает также формат zotero и несколько других (mediawiki,
 wikibase). Цитируемый URL включает параметр oldid – идентификатор
@@ -371,41 +324,35 @@ wikibase). Цитируемый URL включает параметр oldid – 
 необходимость URL-кодирования гиперссылки страницы Wikipedia. Результат
 – скачивание текстового файла с цитирование в выбранном формате.
 
-> <a
-> href="https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики"
-> target="_blank"><code>https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики</code></a>
+> [`https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики`](https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
 ## Типовые задачи – правки и просмотры
 
-### История правок статьи в Wikipedia
+#### История правок статьи в Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**WM**
+**`Wikimedia REST API`**
 
 возвращает последнюю правку и имя последнего пользователя
 
-> <a
-> href="https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук"
-> target="_blank"><code>https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук</code></a>
+> [`https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук`](https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук)
 
-**WP**
+**`Wikipedia REST API`**
 
 возвращает историю правок с id изменения, временем правки, данными о
 создателе (id, name) и размером правок (delta).
 
-> <a
-> href="https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history"
-> target="_blank"><code>https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history</code></a>
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history)
 
-Дополнив запрос выражением *?older_than=939967546* (или
-*?newer_than=1018790892*) можно получить более ранние (или поздние)
+Дополнив запрос выражением `?older_than=939967546` (или
+`?newer_than=1018790892`) можно получить более ранние (или поздние)
 правки (вместо цифр подставлять id конкретной правки)
 
-Добавив в запрос выражение ?filter=…, можно отобрать только определенные
-правки:
+Добавив в запрос выражение `?filter=...`, можно отобрать только
+определенные правки:
 
 -   reverted: правки, отменяющие более ранние изменения
 -   anonymous: правки, сделанные анонимными пользователями (показывает
@@ -413,53 +360,41 @@ wikibase). Цитируемый URL включает параметр oldid – 
 -   bot: правки, сделанные ботами,
 -   minor: правки, отмеченные как незначительные (minor edits)
 
-> <a
-> href="https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&amp;filter=anonymous"
-> target="_blank"><code>https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&amp;filter=anonymous</code></a>
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&filter=anonymous`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&filter=anonymous)
 
-**Количество правок**
+Количество правок
 
-> <a
-> href="https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits"
-> target="_blank"><code>https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits</code></a>
+> [`https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ/history/counts/edits?`](https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ/history/counts/edits?)
 
-> <a
-> href="https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&amp;to=97918317"
-> target="_blank"><code>https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&amp;to=97918317</code></a>
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&to=97918317`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&to=97918317)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Список тех, кто правил страницу
+#### Список тех, кто правил страницу
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`MediaWiki Action API`**
 
-**MWA**
+[:blue_book:
+Информация](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Bcontributors)
 
-<a
-href="https://www.mediawiki.org/w/api.php?action=help&amp;modules=query%2Bcontributors"
-target="_blank">Информация</a>
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=contributors&pclimit=200&pcgroup=bot&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=contributors&pclimit=200&pcgroup=bot&format=json)
 
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=query&amp;titles=The%20BMJ&amp;prop=contributors&amp;pclimit=200&amp;pcgroup=bot&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=query&amp;titles=The%20BMJ&amp;prop=contributors&amp;pclimit=200&amp;pcgroup=bot&amp;format=json</code></a>
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Статистика просмотров страницы в Wikipedia
+#### Статистика просмотров страницы в Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-<a href="https://wikimedia.org/api/rest_v1/"
-target="_blank">Инструкция</a>
+[:notebook: Инструкция](https://wikimedia.org/api/rest_v1/)
 
 Запросы должны иметь синтаксис вида
 `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/ {project}/{access}/{agent}/{article}/{granularity}/{start}/{end}`,
 в {article} необходимо заменить пробелы на \_ и использовать
 URL-кодирование.
 
-> <a
-> href="https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331"
-> target="_blank"><code>https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331</code></a>
+> [`https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331`](https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331)
 
 **Другие веб-интерфейсы:**
 
@@ -469,126 +404,104 @@ URL-кодирование.
 -   <https://www.wikishark.com/title/en/The_BMJ>
 -   <https://wikipediaviews.org/>
 
-------------------------------------------------------------------------
-
-### Количество новых страниц в Wikipedia по месяцам
-
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**WM**
-
-> <a
-> href="https://wikimedia.org/api/rest_v1/metrics/edited-pages/new/ru.wikipedia.org/user/content/monthly/20210101/20230401"
-> target="_blank"><code>https://wikimedia.org/api/rest_v1/metrics/edited-pages/new/ru.wikipedia.org/user/content/monthly/20210101/20230401</code></a>
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Рейтинг редакторов по дням
+#### Количество новых страниц в Wikipedia по месяцам
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`Wikimedia REST API`**
 
-**WM**
+> [`https://wikimedia.org/api/rest_v1/metrics/edited-pages/new/ru.wikipedia.org/user/content/monthly/20210101/20230401`](https://wikimedia.org/api/rest_v1/metrics/edited-pages/new/ru.wikipedia.org/user/content/monthly/20210101/20230401)
 
-> <a
-> href="https://wikimedia.org/api/rest_v1/metrics/editors/top-by-edits/ru.wikipedia.org/user/content/2023/03/31"
-> target="_blank"><code>https://wikimedia.org/api/rest_v1/metrics/editors/top-by-edits/ru.wikipedia.org/user/content/2023/03/31</code></a>
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Количество новых редакторов по месяцам
+#### Рейтинг редакторов по дням
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`Wikimedia REST API`**
 
-**WM**
+> [`https://wikimedia.org/api/rest_v1/metrics/editors/top-by-edits/ru.wikipedia.org/user/content/2023/03/31`](https://wikimedia.org/api/rest_v1/metrics/editors/top-by-edits/ru.wikipedia.org/user/content/2023/03/31)
 
-> <a
-> href="https://wikimedia.org/api/rest_v1/metrics/registered-users/new/ru.wikipedia.org/monthly/20200101/20230331"
-> target="_blank"><code>https://wikimedia.org/api/rest_v1/metrics/registered-users/new/ru.wikipedia.org/monthly/20200101/20230331</code></a>
+[:top:](#mediawiki-action-api)
+
+------------------------------------------------------------------------
+
+#### Количество новых редакторов по месяцам
+
+**`Wikimedia REST API`**
+
+> [`https://wikimedia.org/api/rest_v1/metrics/registered-users/new/ru.wikipedia.org/monthly/20200101/20230331`](https://wikimedia.org/api/rest_v1/metrics/registered-users/new/ru.wikipedia.org/monthly/20200101/20230331)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
 ## Типовые задачи – ссылки и цитирования
 
-### Поиск статей в Wikipedia, цитирующих внешний web-сайт
+#### Поиск статей в Wikipedia, цитирующих внешний web-сайт
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`MediaWiki Action API`**
 
-**MWA**
-
-<a href="https://www.mediawiki.org/wiki/API:Exturlusage"
-target="_blank">Инструкция</a>
+[Инструкция](https://www.mediawiki.org/wiki/API:Exturlusage)
 
 Можно искать ссылки только в статьях определенного типа, используя
-выражение *&eunamespace=…* и определенные значения (0 – Wikipedia Page,
-1 – Talk:Page, 2 – Профили пользователей, 3 – личные User talk
+выражение `&eunamespace=...` и определенные значения (0 – Wikipedia
+Page, 1 – Talk:Page, 2 – Профили пользователей, 3 – личные User talk
 страницы).
 
-> <a
-> href="https://ru.wikipedia.org/w/api.php?action=query&amp;format=json&amp;list=exturlusage&amp;euquery=www.mediasphera.ru&amp;eunamespace=0"
-> target="_blank"><code>https://ru.wikipedia.org/w/api.php?action=query&amp;format=json&amp;list=exturlusage&amp;euquery=www.mediasphera.ru&amp;eunamespace=0</code></a>
+> [`https://ru.wikipedia.org/w/api.php?action=query&format=json&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0`](https://ru.wikipedia.org/w/api.php?action=query&format=json&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Поиск статей Wikipedia, цитирующих выбранную страницу Wikipedia
+#### Поиск статей Wikipedia, цитирующих выбранную страницу Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`MediaWiki Action API`**
 
-**MWA**
+[Инструкция](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Blinkshere)
 
-<a
-href="https://www.mediawiki.org/w/api.php?action=help&amp;modules=query%2Blinkshere"
-target="_blank">Инструкция</a>
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=linkshere&lhlimit=200&lhnamespace=0&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=linkshere&lhlimit=200&lhnamespace=0&format=json)
 
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=query&amp;titles=The%20BMJ&amp;prop=linkshere&amp;lhlimit=200&amp;lhnamespace=0&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=query&amp;titles=The%20BMJ&amp;prop=linkshere&amp;lhlimit=200&amp;lhnamespace=0&amp;format=json</code></a>
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Ссылки на другие статьи Wikipedia с выбранной страницы Wikipedia
+#### Ссылки на другие статьи Wikipedia с выбранной страницы Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+**`MediaWiki Action API`**
 
-**MWA**
-
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=links&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=links&amp;format=json</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=links&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=links&format=json)
 
 ------------------------------------------------------------------------
 
-### Ссылки на внешние сайты с выбранной страницы Wikipedia
+#### Ссылки на внешние сайты с выбранной страницы Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
+[Инструкция](https://www.mediawiki.org/wiki/API:Extlinks)
 
-<a href="https://www.mediawiki.org/wiki/API:Extlinks"
-target="_blank">Инструкция</a>
+**`MediaWiki Action API`**
 
-**MWA**
-
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=query&amp;titles=The%20BMJ&amp;prop=extlinks&amp;ellimit=500&amp;elexpandurl=true&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=query&amp;titles=The%20BMJ&amp;prop=extlinks&amp;ellimit=500&amp;elexpandurl=true&amp;format=json</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=extlinks&ellimit=500&elexpandurl=true&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=extlinks&ellimit=500&elexpandurl=true&format=json)
 
 Можно объединить ссылки с внутренними (на страницы Wikipedia), выбрав
-*prop=extlinks\|links*.
+`prop=extlinks|links`.
 
-<a href="https://www.mediawiki.org/wiki/API:Parsing_wikitext"
-target="_blank">Альтернативный способ</a>
+[Альтернативный
+способ](https://www.mediawiki.org/wiki/API:Parsing_wikitext)
 
-> <a
-> href="https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=externallinks&amp;format=json"
-> target="_blank"><code>https://en.wikipedia.org/w/api.php?action=parse&amp;page=The%20BMJ&amp;prop=externallinks&amp;format=json</code></a>
+> [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=externallinks&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=externallinks&format=json)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
 ## Наукометрия в Wikidata
 
-### Сбор Wikidata-сведений о журнале по ISSN
+#### Сбор Wikidata-сведений о журнале по ISSN
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?item ?types ?issns ?issnLs ?titles ?short_titles 
@@ -689,17 +602,16 @@ INCLUDE %sss .
 }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fitem%20%3Ftypes%20%3Fissns%20%3FissnLs%20%3Ftitles%20%3Fshort_titles%20%0A%20%20%20%20%3Fitemlabel_en%20%3Fitemlabel_ru%20%20%3Fcountries%20%3Flangs%20%3Fpublishers%20%3Fwebsites%20%0A%20%20%20%20%3FarticleEN%20%3FarticleRU%20%20%3Felibrary%20%3Fopenalex_ids%20%3Fscilit_ids%20%3Fnlm_ids%20%0A%20%20%20%20%3Fcref_ids%20%3Fcoci_ids%20%3Fscids%20%3Fdim_ids%20%20%3Fdoaj_ids%20%3Fbnf_ids%20%3Fsudoc_ids%20%3Fgnd_ids%20%0A%20%20%20%20%3Feics%20%3Feic_orcids%20%3Feditors%20%3Feditor_orcids%20%20%3Finception%20%20%3Ffounded%20%3Fpart_of%20%3Fhas_part%20%0A%20%20%20%20%3Ffollows%20%3Ffollowed%20%3Freplaces%20%3Freplaced%20%3Fdiscontinued%20%3Ftranslation%20%3Fsubjects%0AWITH%20%7B%0A%20SELECT%20DISTINCT%20%3Fitem%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fwebsite%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fwebsites%29%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FtypeLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Ftypes%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Ftitle%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Ftitles%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fshort_title%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fshort_titles%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fmain_subjectLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fsubjects%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FpublisherLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fpublishers%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fcountry%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fcountries%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Flanguage%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Flangs%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fissn%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fissns%29%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FissnL%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3FissnLs%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fopenalex%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fopenalex_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdimensions%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fdim_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fcrossref%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fcref_ids%29%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fnlm%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fnlm_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fcoci%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fcoci_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fbnf%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fbnf_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fgnd%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fgnd_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoaj%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fdoaj_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fsudoc%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fsudoc_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fscilit%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fscilit_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fscid%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fscids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Feditor_orcid%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feditor_orcids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Feic_orcid%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feic_orcids%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FeditorLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feditors%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FeicLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feics%29%20%20%0AWHERE%7B%0A%20%20%20%20%3Fitem%20wdt%3AP236%20%3Fquery.%20FILTER%28%3Fquery%20in%20%28%221550-8943%22%2C%20%220007-1447%22%29%29.%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP31%20%3Ftype.%20%3Ftype%20rdfs%3Alabel%20%3FtypeLabel.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FtypeLabel%29%3D%22en%22%29.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP236%20%3Fissn.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP7363%20%3FissnL.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP5115%20%3Fdoaj.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP10283%20%3Fopenalex.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP8375%20%3Fcrossref.%7D%20%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP3181%20%3Fcoci.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1156%20%3Fscid.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP6180%20%3Fdimensions.%7D%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP268%20%3Fbnf.%7D%20%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP227%20%3Fgnd.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1025%20%3Fsudoc.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP7662%20%3Fscilit.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1055%20%3Fnlm.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP856%20%3Fwebsite.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1476%20%3Ftitle%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1813%20%3Fshort_title.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP407%20%3Fll.%20%3Fll%20rdfs%3Alabel%20%3Flanguage.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3Flanguage%29%3D%22en%22%29%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP495%20%3Fcc.%20%3Fcc%20rdfs%3Alabel%20%3Fcountry.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3Fcountry%29%3D%22en%22%29%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP921%20%3Fmain_subject.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Fmain_subject%20rdfs%3Alabel%20%3Fmain_subjectLabel.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3Fmain_subjectLabel%29%3D%22en%22%29%20%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP123%20%3Fpublisher.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Fpublisher%20rdfs%3Alabel%20%3FpublisherLabel.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FpublisherLabel%29%3D%22en%22%29%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP5769%20%3Feic.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Feic%20rdfs%3Alabel%20%3FeicLabel.%20%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FeicLabel%29%3D%22en%22%29.%0A%20%20%20%20%20%20%20%20%20%20%20optional%7B%3Feic%20wdt%3AP496%20%3Feic_orcid.%7D%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP98%20%3Feditor.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Feditor%20rdfs%3Alabel%20%3FeditorLabel.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FeditorLabel%29%3D%22en%22%29.%0A%20%20%20%20%20%20%20%20%20%20%20optional%7B%3Feditor%20wdt%3AP496%20%3Feditor_orcid.%7D%7D%0A%20%20%20%7D%20%0AGROUP%20BY%20%3Fitem%20%3Fitemlabel_en%0A%7D%20as%20%25sss%0AWHERE%20%7B%0AINCLUDE%20%25sss%20.%0A%20%20%20optional%7B%3Fitem%20rdfs%3Alabel%20%3Fitemlabel_en.%20FILTER%28lang%28%3Fitemlabel_en%29%3D%22en%22%29%7D%0A%20%20%20optional%7B%3Fitem%20rdfs%3Alabel%20%3Fitemlabel_ru.%20FILTER%28lang%28%3Fitemlabel_ru%29%3D%22ru%22%29%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP10952%20%3Felibrary%7D%20%20%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP571%20%3Finception%7D%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP112%20%3Ffounded%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP527%20%3Fhas_part%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP361%20%3Fpart_of%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP155%20%3Ffollows%7D%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP156%20%3Ffollowed%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP1365%20%3Freplaces%7D%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP1366%20%3Freplaced%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP2669%20%3Fdiscontinued%7D%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP9745%20%3Ftranslation%7D%0A%20%20%20optional%20%7B%0A%20%20%20%20%20%3FarticleEN%20schema%3Aabout%20%3Fitem.%0A%20%20%20%20%20%3FarticleEN%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fen.wikipedia.org%2F%3E.%0A%20%20%20%20%20%3FarticleRU%20schema%3Aabout%20%3Fitem.%0A%20%20%20%20%20%3FarticleRU%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E.%0A%20%20%20%20%7D%0A%7D"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fitem%20%3Ftypes%20%3Fissns%20%3FissnLs%20%3Ftitles%20%3Fshort_titles%20%0A%20%20%20%20%3Fitemlabel_en%20%3Fitemlabel_ru%20%20%3Fcountries%20%3Flangs%20%3Fpublishers%20%3Fwebsites%20%0A%20%20%20%20%3FarticleEN%20%3FarticleRU%20%20%3Felibrary%20%3Fopenalex_ids%20%3Fscilit_ids%20%3Fnlm_ids%20%0A%20%20%20%20%3Fcref_ids%20%3Fcoci_ids%20%3Fscids%20%3Fdim_ids%20%20%3Fdoaj_ids%20%3Fbnf_ids%20%3Fsudoc_ids%20%3Fgnd_ids%20%0A%20%20%20%20%3Feics%20%3Feic_orcids%20%3Feditors%20%3Feditor_orcids%20%20%3Finception%20%20%3Ffounded%20%3Fpart_of%20%3Fhas_part%20%0A%20%20%20%20%3Ffollows%20%3Ffollowed%20%3Freplaces%20%3Freplaced%20%3Fdiscontinued%20%3Ftranslation%20%3Fsubjects%0AWITH%20%7B%0A%20SELECT%20DISTINCT%20%3Fitem%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fwebsite%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fwebsites%29%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FtypeLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Ftypes%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Ftitle%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Ftitles%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fshort_title%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fshort_titles%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fmain_subjectLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fsubjects%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FpublisherLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fpublishers%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fcountry%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fcountries%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Flanguage%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Flangs%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fissn%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fissns%29%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FissnL%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3FissnLs%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fopenalex%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fopenalex_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdimensions%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fdim_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fcrossref%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fcref_ids%29%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fnlm%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fnlm_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fcoci%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fcoci_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fbnf%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fbnf_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fgnd%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fgnd_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoaj%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fdoaj_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fsudoc%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fsudoc_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fscilit%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fscilit_ids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fscid%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Fscids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Feditor_orcid%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feditor_orcids%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Feic_orcid%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feic_orcids%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FeditorLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feditors%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3FeicLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Feics%29%20%20%0AWHERE%7B%0A%20%20%20%20%3Fitem%20wdt%3AP236%20%3Fquery.%20FILTER%28%3Fquery%20in%20%28%221550-8943%22%2C%20%220007-1447%22%29%29.%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP31%20%3Ftype.%20%3Ftype%20rdfs%3Alabel%20%3FtypeLabel.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FtypeLabel%29%3D%22en%22%29.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP236%20%3Fissn.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP7363%20%3FissnL.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP5115%20%3Fdoaj.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP10283%20%3Fopenalex.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP8375%20%3Fcrossref.%7D%20%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP3181%20%3Fcoci.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1156%20%3Fscid.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP6180%20%3Fdimensions.%7D%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP268%20%3Fbnf.%7D%20%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP227%20%3Fgnd.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1025%20%3Fsudoc.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP7662%20%3Fscilit.%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1055%20%3Fnlm.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP856%20%3Fwebsite.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1476%20%3Ftitle%7D%20%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP1813%20%3Fshort_title.%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP407%20%3Fll.%20%3Fll%20rdfs%3Alabel%20%3Flanguage.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3Flanguage%29%3D%22en%22%29%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP495%20%3Fcc.%20%3Fcc%20rdfs%3Alabel%20%3Fcountry.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3Fcountry%29%3D%22en%22%29%7D%0A%20%20%20%20optional%7B%3Fitem%20wdt%3AP921%20%3Fmain_subject.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Fmain_subject%20rdfs%3Alabel%20%3Fmain_subjectLabel.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3Fmain_subjectLabel%29%3D%22en%22%29%20%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP123%20%3Fpublisher.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Fpublisher%20rdfs%3Alabel%20%3FpublisherLabel.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FpublisherLabel%29%3D%22en%22%29%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP5769%20%3Feic.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Feic%20rdfs%3Alabel%20%3FeicLabel.%20%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FeicLabel%29%3D%22en%22%29.%0A%20%20%20%20%20%20%20%20%20%20%20optional%7B%3Feic%20wdt%3AP496%20%3Feic_orcid.%7D%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP98%20%3Feditor.%20%0A%20%20%20%20%20%20%20%20%20%20%20%3Feditor%20rdfs%3Alabel%20%3FeditorLabel.%0A%20%20%20%20%20%20%20%20%20%20%20FILTER%28lang%28%3FeditorLabel%29%3D%22en%22%29.%0A%20%20%20%20%20%20%20%20%20%20%20optional%7B%3Feditor%20wdt%3AP496%20%3Feditor_orcid.%7D%7D%0A%20%20%20%7D%20%0AGROUP%20BY%20%3Fitem%20%3Fitemlabel_en%0A%7D%20as%20%25sss%0AWHERE%20%7B%0AINCLUDE%20%25sss%20.%0A%20%20%20optional%7B%3Fitem%20rdfs%3Alabel%20%3Fitemlabel_en.%20FILTER%28lang%28%3Fitemlabel_en%29%3D%22en%22%29%7D%0A%20%20%20optional%7B%3Fitem%20rdfs%3Alabel%20%3Fitemlabel_ru.%20FILTER%28lang%28%3Fitemlabel_ru%29%3D%22ru%22%29%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP10952%20%3Felibrary%7D%20%20%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP571%20%3Finception%7D%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP112%20%3Ffounded%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP527%20%3Fhas_part%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP361%20%3Fpart_of%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP155%20%3Ffollows%7D%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP156%20%3Ffollowed%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP1365%20%3Freplaces%7D%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP1366%20%3Freplaced%7D%0A%20%20%20optional%7B%3Fitem%20wdt%3AP2669%20%3Fdiscontinued%7D%20%20%0A%20%20%20optional%7B%3Fitem%20wdt%3AP9745%20%3Ftranslation%7D%0A%20%20%20optional%20%7B%0A%20%20%20%20%20%3FarticleEN%20schema%3Aabout%20%3Fitem.%0A%20%20%20%20%20%3FarticleEN%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fen.wikipedia.org%2F%3E.%0A%20%20%20%20%20%3FarticleRU%20schema%3Aabout%20%3Fitem.%0A%20%20%20%20%20%3FarticleRU%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E.%0A%20%20%20%20%7D%0A%7D)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Все российские журналы в Wikidata
+#### Все российские журналы в Wikidata
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?journal ?name WHERE {
@@ -713,17 +625,16 @@ SELECT DISTINCT ?journal ?name WHERE {
 }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3Fname%20WHERE%20%7B%0A%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D%0A%20%20%3Fcountry%20wdt%3AP17%20wd%3AQ159.%0A%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%2a%20%3Ftype%3B%20%20wdt%3AP495%20%3Fcountry.%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2C%20ru%22.%0A%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fname%20.%0A%20%20%7D%0A%7D"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3Fname%20WHERE%20%7B%0A%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D%0A%20%20%3Fcountry%20wdt%3AP17%20wd%3AQ159.%0A%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%2a%20%3Ftype%3B%20%20wdt%3AP495%20%3Fcountry.%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2C%20ru%22.%0A%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fname%20.%0A%20%20%7D%0A%7D)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Количество статей в Wikidata в российских журналах
+#### Количество статей в Wikidata в российских журналах
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?journal ?journal_title (count(?item) as ?count) 
@@ -745,17 +656,16 @@ WHERE {
 GROUP BY ?journal ?journal_title
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3Fjournal_title%20%28count%28%3Fitem%29%20as%20%3Fcount%29%20%0AWITH%20%7B%0A%20SELECT%20DISTINCT%20%3Fjournal%20%3Fjournal_title%20%0A%20%20WHERE%20%7B%0A%20%20%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%20%3Ftype%3B%20wdt%3AP495%20wd%3AQ159.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cru%22.%20%0A%20%20%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fjournal_title.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%20as%20%25sss%20%0AWHERE%20%7B%0A%20%20INCLUDE%20%25sss%20.%0A%20%20%3Fitem%20wdt%3AP1433%20%3Fjournal%3B%20wdt%3AP31%20wd%3AQ13442814.%0A%20%20%7D%0AGROUP%20BY%20%3Fjournal%20%3Fjournal_title%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3Fjournal_title%20%28count%28%3Fitem%29%20as%20%3Fcount%29%20%0AWITH%20%7B%0A%20SELECT%20DISTINCT%20%3Fjournal%20%3Fjournal_title%20%0A%20%20WHERE%20%7B%0A%20%20%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%20%3Ftype%3B%20wdt%3AP495%20wd%3AQ159.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cru%22.%20%0A%20%20%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fjournal_title.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%20as%20%25sss%20%0AWHERE%20%7B%0A%20%20INCLUDE%20%25sss%20.%0A%20%20%3Fitem%20wdt%3AP1433%20%3Fjournal%3B%20wdt%3AP31%20wd%3AQ13442814.%0A%20%20%7D%0AGROUP%20BY%20%3Fjournal%20%3Fjournal_title%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Извлечение источников заданного свойства
+#### Извлечение источников заданного свойства
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT ?issn ?ref ?refLabel 
@@ -769,17 +679,16 @@ WHERE {
 }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20%3Fissn%20%3Fref%20%3FrefLabel%20%0AWHERE%20%7B%0A%20%20wd%3AQ3453517%20p%3AP236%20%5B%0A%20%20%20%20ps%3AP236%20%3Fissn%3B%20prov%3AwasDerivedFrom%20%5B%0A%20%20%20%20%20%20pr%3AP248%7Cpr%3AP143%20%3Fref%20%0A%20%20%20%20%5D%0A%20%20%5D.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0A%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20%3Fissn%20%3Fref%20%3FrefLabel%20%0AWHERE%20%7B%0A%20%20wd%3AQ3453517%20p%3AP236%20%5B%0A%20%20%20%20ps%3AP236%20%3Fissn%3B%20prov%3AwasDerivedFrom%20%5B%0A%20%20%20%20%20%20pr%3AP248%7Cpr%3AP143%20%3Fref%20%0A%20%20%20%20%5D%0A%20%20%5D.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0A%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Статьи из выбранного журнала и цитирующие их журналы
+#### Статьи из выбранного журнала и цитирующие их журналы
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?doi ?itemLabel ?citingJournalLabel 
@@ -801,17 +710,16 @@ GROUP BY ?doi ?itemLabel ?citingJournalLabel
 ORDER BY ?itemLabel
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fdoi%20%3FitemLabel%20%3FcitingJournalLabel%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%28count%28distinct%28%3Fciting_pub%29%29%20as%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20optional%7B%20%0A%20%20%20%20%3Fciting_pub%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP1433%20%3FcitingJournal.%0A%20%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2C%20en%2C%20ru%22.%0A%20%20%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel%20.%0A%20%20%20%20%20%20%3FcitingJournal%20rdfs%3Alabel%20%3FcitingJournalLabel%20.%0A%20%20%7D%0A%7D%0AGROUP%20BY%20%3Fdoi%20%3FitemLabel%20%3FcitingJournalLabel%0AORDER%20BY%20%3FitemLabel%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fdoi%20%3FitemLabel%20%3FcitingJournalLabel%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%28count%28distinct%28%3Fciting_pub%29%29%20as%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20optional%7B%20%0A%20%20%20%20%3Fciting_pub%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP1433%20%3FcitingJournal.%0A%20%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2C%20en%2C%20ru%22.%0A%20%20%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel%20.%0A%20%20%20%20%20%20%3FcitingJournal%20rdfs%3Alabel%20%3FcitingJournalLabel%20.%0A%20%20%7D%0A%7D%0AGROUP%20BY%20%3Fdoi%20%3FitemLabel%20%3FcitingJournalLabel%0AORDER%20BY%20%3FitemLabel%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Список авторов выбранного журнала, имеющих ORCID
+#### Список авторов выбранного журнала, имеющих ORCID
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?author_id ?orcid_ ?author
@@ -828,17 +736,16 @@ WHERE {
 }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor_id%20%3Forcid_%20%3Fauthor%0AWHERE%20%7B%0A%20%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955.%0A%20%20%20optional%7B%0A%20%20%20%20%20%20%20%20%20%20%20%3Fitem%20p%3AP50%7Cp%3AP2093%20%3Fauthor_statement%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_statement%20ps%3AP50%7Cps%3AP2093%20%3Fauthor_id%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_id%20wdt%3AP496%20%3Forcid.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2C%20en%2C%20ru%22.%0A%20%20%20%20%3Fauthor_id%20rdfs%3Alabel%20%3Fauthor%20.%0A%20%20%7D%0A%7D%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor_id%20%3Forcid_%20%3Fauthor%0AWHERE%20%7B%0A%20%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955.%0A%20%20%20optional%7B%0A%20%20%20%20%20%20%20%20%20%20%20%3Fitem%20p%3AP50%7Cp%3AP2093%20%3Fauthor_statement%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_statement%20ps%3AP50%7Cps%3AP2093%20%3Fauthor_id%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_id%20wdt%3AP496%20%3Forcid.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2C%20en%2C%20ru%22.%0A%20%20%20%20%3Fauthor_id%20rdfs%3Alabel%20%3Fauthor%20.%0A%20%20%7D%0A%7D%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Женщины-ученые с наградами, цитировавшие выбранный журнал
+#### Женщины-ученые с наградами, цитировавшие выбранный журнал
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT ?authorLabel ?orcid ?awards
@@ -869,17 +776,16 @@ WHERE {
  }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20%3FauthorLabel%20%3Forcid%20%3Fawards%0AWITH%20%7B%0A%20%20SELECT%20%3Fauthor%20%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%28%3Faward%29%3B%20separator%3D%22%20%7C%20%22%29%20AS%20%3Fawards%29%0A%20%20WHERE%20%7B%0A%20%20%3Fwork%20wdt%3AP1433%20wd%3AQ4300349.%0A%20%20%3Freference_pub%20wdt%3AP2860%20%3Fwork.%0A%20%20%3Freference_pub%20wdt%3AP50%20%3Fauthor%20.%0A%20%20%3Fauthor%20p%3AP166%20%3Faward_statement.%0A%20%20%3Faward_statement%20ps%3AP166%20%3Faward_.%0A%20%20%3Fauthor%20wdt%3AP21%20wd%3AQ6581072%20.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%20%0A%20%20%20%20%20%20%3Faward_%20rdfs%3Alabel%20%3Faward.%0A%20%20%20%20%7D%20%0A%20%20%7D%0AGROUP%20BY%20%3Fauthor%20%20%0A%7D%20AS%20%25result%0AWHERE%20%7B%0A%20%20INCLUDE%20%25result%20%0A%20%20%20optional%7B%3Fauthor%20wdt%3AP496%20%3Forcid%20.%7D%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%09%20%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%0A%20%20%20%20%20%20%20%20%3Fauthor%20rdfs%3Alabel%20%3FauthorLabel.%09%0A%20%20%09%7D%0A%20%7D%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20%3FauthorLabel%20%3Forcid%20%3Fawards%0AWITH%20%7B%0A%20%20SELECT%20%3Fauthor%20%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%28%3Faward%29%3B%20separator%3D%22%20%7C%20%22%29%20AS%20%3Fawards%29%0A%20%20WHERE%20%7B%0A%20%20%3Fwork%20wdt%3AP1433%20wd%3AQ4300349.%0A%20%20%3Freference_pub%20wdt%3AP2860%20%3Fwork.%0A%20%20%3Freference_pub%20wdt%3AP50%20%3Fauthor%20.%0A%20%20%3Fauthor%20p%3AP166%20%3Faward_statement.%0A%20%20%3Faward_statement%20ps%3AP166%20%3Faward_.%0A%20%20%3Fauthor%20wdt%3AP21%20wd%3AQ6581072%20.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%20%0A%20%20%20%20%20%20%3Faward_%20rdfs%3Alabel%20%3Faward.%0A%20%20%20%20%7D%20%0A%20%20%7D%0AGROUP%20BY%20%3Fauthor%20%20%0A%7D%20AS%20%25result%0AWHERE%20%7B%0A%20%20INCLUDE%20%25result%20%0A%20%20%20optional%7B%3Fauthor%20wdt%3AP496%20%3Forcid%20.%7D%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%09%20%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%0A%20%20%20%20%20%20%20%20%3Fauthor%20rdfs%3Alabel%20%3FauthorLabel.%09%0A%20%20%09%7D%0A%20%7D%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Российские ученые, имеющие ORCID и страницу в RU-Wikipedia
+#### Российские ученые, имеющие ORCID и страницу в RU-Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?author ?authorLabel ?orcid ?article
@@ -895,17 +801,16 @@ SERVICE wikibase:label {
 }
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor%20%3FauthorLabel%20%3Forcid%20%3Farticle%0A%20%20WHERE%20%7B%0A%20%20%20%20%3Fauthor%20wdt%3AP31%20wd%3AQ5%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP27%20wd%3AQ159%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP496%20%3Forcid.%20%20%20%20%20%20%0A%20%20%20%20optional%7B%3Farticle%20schema%3Aabout%20%3Fauthor.%0A%20%20%20%20%20%20%20%20%20%3Farticle%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E.%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0ASERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%20%7D%0A%7D%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor%20%3FauthorLabel%20%3Forcid%20%3Farticle%0A%20%20WHERE%20%7B%0A%20%20%20%20%3Fauthor%20wdt%3AP31%20wd%3AQ5%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP27%20wd%3AQ159%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP496%20%3Forcid.%20%20%20%20%20%20%0A%20%20%20%20optional%7B%3Farticle%20schema%3Aabout%20%3Fauthor.%0A%20%20%20%20%20%20%20%20%20%3Farticle%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E.%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0ASERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%20%7D%0A%7D%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Исследователи младше 30 лет, имеющие статью в EN Wikipedia
+#### Исследователи младше 30 лет, имеющие статью в EN Wikipedia
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT ?sitelink ?itemLabel WHERE {
@@ -924,17 +829,16 @@ SELECT ?sitelink ?itemLabel WHERE {
 ORDER BY ?itemLabel
 ```
 
-<a
-href="https://query.wikidata.org/#SELECT%20%3Fsitelink%20%3FitemLabel%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP106%20wd%3AQ901%3B%0A%20%20%20%20%20%20%20%20wdt%3AP31%20wd%3AQ5%3B%0A%20%20%20%20%20%20%20%20wdt%3AP569%20%3Fborn%20.%0A%20%20FILTER%20%28%3Fborn%20%3E%3D%20%221993-04-24T00%3A00%3A00Z%22%5E%5Exsd%3AdateTime%29.%20%0A%20%20%23%20exclude%20if%20there%20is%20a%20date%20of%20death%0A%20%20MINUS%20%7B%3Fitem%20wdt%3AP570%20%5B%5D%7D%20%20%20%20%0A%20%20%3Fsitelink%20schema%3Aabout%20%3Fitem%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fen.wikipedia.org%2F%3E.%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%0A%20%20%20%7D.%0A%7D%20%20%0AORDER%20BY%20%3FitemLabel%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/#SELECT%20%3Fsitelink%20%3FitemLabel%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP106%20wd%3AQ901%3B%0A%20%20%20%20%20%20%20%20wdt%3AP31%20wd%3AQ5%3B%0A%20%20%20%20%20%20%20%20wdt%3AP569%20%3Fborn%20.%0A%20%20FILTER%20%28%3Fborn%20%3E%3D%20%221993-04-24T00%3A00%3A00Z%22%5E%5Exsd%3AdateTime%29.%20%0A%20%20%23%20exclude%20if%20there%20is%20a%20date%20of%20death%0A%20%20MINUS%20%7B%3Fitem%20wdt%3AP570%20%5B%5D%7D%20%20%20%20%0A%20%20%3Fsitelink%20schema%3Aabout%20%3Fitem%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fen.wikipedia.org%2F%3E.%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%0A%20%20%20%7D.%0A%7D%20%20%0AORDER%20BY%20%3FitemLabel%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Перечень университетов, расположенных в \<=500 метрах от метро
+#### Перечень университетов, расположенных в \<=500 метрах от метро
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 #defaultView:Map
@@ -955,17 +859,16 @@ SELECT ?place ?placeLabel ?subwayLabel ?location WHERE
 }
 ```
 
-<a
-href="https://query.wikidata.org/index.html#%23defaultView%3AMap%0ASELECT%20%3Fplace%20%3FplaceLabel%20%3FsubwayLabel%20%3Flocation%20WHERE%0A%7B%20%0A%20%20%3Fsubway%20wdt%3AP131%2B%20wd%3AQ649%3B%0A%20%20%20%20%20%20%20%20%20%20wdt%3AP31%20wd%3AQ928830.%0A%20%20%3Fsubway%20wdt%3AP625%20%3FarcLoc%20.%0A%20%20SERVICE%20wikibase%3Aaround%20%7B%0A%20%20%20%20%20%20%3Fplace%20wdt%3AP625%20%3Flocation%20.%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Acenter%20%3FarcLoc%20.%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Aradius%20%220.5%22%20.%0A%20%20%7D%0A%20%20%20%20%3Fplace%20wdt%3AP31%20wd%3AQ3918.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22ru%22%20.%0A%20%20%7D%0A%7D%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/index.html#%23defaultView%3AMap%0ASELECT%20%3Fplace%20%3FplaceLabel%20%3FsubwayLabel%20%3Flocation%20WHERE%0A%7B%20%0A%20%20%3Fsubway%20wdt%3AP131%2B%20wd%3AQ649%3B%0A%20%20%20%20%20%20%20%20%20%20wdt%3AP31%20wd%3AQ928830.%0A%20%20%3Fsubway%20wdt%3AP625%20%3FarcLoc%20.%0A%20%20SERVICE%20wikibase%3Aaround%20%7B%0A%20%20%20%20%20%20%3Fplace%20wdt%3AP625%20%3Flocation%20.%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Acenter%20%3FarcLoc%20.%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Aradius%20%220.5%22%20.%0A%20%20%7D%0A%20%20%20%20%3Fplace%20wdt%3AP31%20wd%3AQ3918.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22ru%22%20.%0A%20%20%7D%0A%7D%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Перечень организаций, цитировавших статьи из выбранного журнала
+#### Перечень организаций, цитировавших статьи из выбранного журнала
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?citing_organizationLabel ?citing_countryLabel 
@@ -986,17 +889,16 @@ GROUP BY ?citing_organizationLabel ?citing_countryLabel
 ORDER BY DESC(?n_dois)
 ```
 
-<a
-href="https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%20%0A%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fdoi%29%20AS%20%3Fn_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_dois%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20%28wdt%3AP108%7Cwdt%3AP1416%29%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%7D%20%20%20%20%20%20%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%0AORDER%20BY%20DESC%28%3Fn_dois%29%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%20%0A%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fdoi%29%20AS%20%3Fn_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_dois%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20%28wdt%3AP108%7Cwdt%3AP1416%29%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%7D%20%20%20%20%20%20%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%0AORDER%20BY%20DESC%28%3Fn_dois%29%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Исследователи, цитировавшие статьи из журнала со списком цитирующих и процитированных статей
+#### Исследователи, цитировавшие статьи из журнала со списком цитирующих и процитированных статей
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?citing_authorLabel ?orcid
@@ -1018,17 +920,16 @@ GROUP BY ?citing_authorLabel ?orcid
 ORDER BY DESC(?n_dois)
 ```
 
-<a
-href="https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fciting_authorLabel%20%3Forcid%0A%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fdoi%29%20AS%20%3Fn_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_cited_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_doi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_citing_dois%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fciting_doi.%0A%20optional%7B%3Fciting_author%20wdt%3AP496%20%3Forcid.%7D%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%7D%20%20%20%20%20%20%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_authorLabel%20%3Forcid%0AORDER%20BY%20DESC%28%3Fn_dois%29%0A%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fciting_authorLabel%20%3Forcid%0A%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fdoi%29%20AS%20%3Fn_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_cited_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_doi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_citing_dois%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fciting_doi.%0A%20optional%7B%3Fciting_author%20wdt%3AP496%20%3Forcid.%7D%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%7D%20%20%20%20%20%20%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_authorLabel%20%3Forcid%0AORDER%20BY%20DESC%28%3Fn_dois%29%0A%0A)
+
+[:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
 
-### Статьи из журнала и цитирующие их организации и страны
+#### Статьи из журнала и цитирующие их организации и страны
 
-**[`^        back to top        ^`](#wikipedia-rest-api-wp)**
-
-**SPARQL**
+**`Wikidata SPARQL`**
 
 ``` r
 SELECT DISTINCT ?doi ?itemLabel 
@@ -1053,11 +954,15 @@ GROUP BY ?doi ?itemLabel
 ORDER BY DESC(?n_cited)
 ```
 
-<a
-href="https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fdoi%20%3FitemLabel%20%0A%20%20%20%20%28COUNT%28DISTINCT%20%3Fciting_work%29%20AS%20%3Fn_cited%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_organizationLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_orgs%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_countryLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_countries%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20%28wdt%3AP108%7Cwdt%3AP1416%29%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%3Fciting_organization%20rdfs%3Alabel%20%3Fciting_organizationLabel.%0A%20%20%20%20%3Fciting_country%20rdfs%3Alabel%20%3Fciting_countryLabel.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel.%0A%20%20%20%7D%20%20%20%20%20%20%0A%20%7D%0AGROUP%20BY%20%3Fdoi%20%3FitemLabel%0AORDER%20BY%20DESC%28%3Fn_cited%29%0A"
-target="_blank">отправить через Wikidata Query Service</a>
+[отправить через Wikidata Query
+Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fdoi%20%3FitemLabel%20%0A%20%20%20%20%28COUNT%28DISTINCT%20%3Fciting_work%29%20AS%20%3Fn_cited%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_organizationLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_orgs%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_countryLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_countries%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20%28wdt%3AP108%7Cwdt%3AP1416%29%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%3Fciting_organization%20rdfs%3Alabel%20%3Fciting_organizationLabel.%0A%20%20%20%20%3Fciting_country%20rdfs%3Alabel%20%3Fciting_countryLabel.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel.%0A%20%20%20%7D%20%20%20%20%20%20%0A%20%7D%0AGROUP%20BY%20%3Fdoi%20%3FitemLabel%0AORDER%20BY%20DESC%28%3Fn_cited%29%0A)
 
-### Лицензия
+[:top:](#mediawiki-action-api)
 
-Список распространяется по лицензии [Creative Commons
-Attribution-ShareAlike 3.0 Unported](LICENSE).
+## Обратная связь
+
+Если сделаете pull request, постараюсь принять.
+
+## Лицензия
+
+**Знания – людям!**
