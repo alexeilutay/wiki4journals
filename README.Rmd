@@ -5,8 +5,26 @@ output:
   github_document:
     toc: yes
     toc_depth: 4
-date: '2023-05-23'
+date: '2023-05-28'
 ---
+
+Цель этого сборника примеров -- обратить внимание на уникальные возможности API- и SPARQL-интерефейсов сервисов Wikipedia и Wikidata. Большая часть примеров тематически связана с академическими журналам, поскольку материал был написан для доклада на 11-ой Международной научно-практической конференции Ассоциации научных редакторов и издателей (АНРИ) «Научное издание международного уровня – 2023: достижения, реалии, перспективы» (23-26 мая, 2023 г.). 
+
+***
+
+**Обозначения**
+
+:blue_book: -- гиперссылка на веб-страницу с подробной спецификацией или руководство.
+
+:pushpin: -- недавно добавленные примеры (подробную историю изменений можно всегда увидеть в [истории](https://github.com/alexeilutay/wiki4journals/commits/main).
+
+:warning: -- важное примечание. 
+
+:top: -- кнопка для возвращения к оглавлению страницы.
+
+:art: -- есть на что посмотреть. 
+
+Остальные emoji могут интепретироваться произвольно.
 
 ***
 
@@ -21,11 +39,12 @@ date: '2023-05-23'
 - https://www.mediawiki.org/wiki/API:REST_API 
 - https://www.mediawiki.org/wiki/API:REST_API/Reference 
 
-:fast_forward: Перелистывание результатов
+Перелистывание результатов :fast_forward: 
 
 -	[https://www.mediawiki.org/wiki/API:Continue](https://www.mediawiki.org/wiki/API:Continue) 
 
 #### Wikimedia REST API
+
 -	[https://en.wikipedia.org/api/rest_v1/#/](https://en.wikipedia.org/api/rest_v1/#/)
 
 -	[Спецификация API в JSON](https://en.wikipedia.org/api/rest_v1/?spec) 
@@ -36,7 +55,9 @@ date: '2023-05-23'
 
 #### Wikidata SPARQL
 
-Примеры запросов в основной части будут сопровождаться гиперссылками, открывающими запрос в интерфейсе [Wikidata Query Service](https://query.wikidata.org/). Их также можно отправлять программными средствами с помощью специальных пакетов для R: [WikidataR](https://github.com/TS404/WikidataR), для :snake: : пакет [Wikidata](https://github.com/dahlia/wikidata), [другие примеры](https://www.wikidata.org/wiki/Wikidata:Tools/For_programmers)).   
+Примеры SPARQL-запросов в основной части будут сопровождаться гиперссылками, открывающими запрос в интерфейсе [Wikidata Query Service](https://query.wikidata.org/). Для выполнения запроса в интерфейсе не забудьте нажать кнопку :arrow_forward:. 
+
+Их также можно отправлять программными средствами с помощью R:  [WikidataR](https://github.com/TS404/WikidataR) или :snake: : пакет [Wikidata](https://github.com/dahlia/wikidata), см. также [другие примеры](https://www.wikidata.org/wiki/Wikidata:Tools/For_programmers)).   
 
 - [Руководство по использованию SPARQL (частично на русском языке)](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial/ru)
 
@@ -48,7 +69,13 @@ date: '2023-05-23'
 
 - https://wdqs-tutorial.toolforge.org/
 
-- [Архив SPARQL запросов 2015-2022 из еженедельных дайджестов)](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/qotw) :blue_book:
+- :blue_book: [Архивная коллекция SPARQL-запросов к Викиданным из еженедельных дайджестов Query of the Week, 2015-2022)](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/qotw).
+
+- [Список атрибутов](https://www.wikidata.org/wiki/Wikidata:List_of_properties). Академические издатели найдут атрибуты для описания журналов, статей и авторов в разделах [research](https://www.wikidata.org/wiki/Wikidata:List_of_properties/research), [science](https://www.wikidata.org/wiki/Wikidata:List_of_properties/science), [unique identifier](https://www.wikidata.org/wiki/Wikidata:List_of_properties/unique_identifier), [work](https://www.wikidata.org/wiki/Wikidata:List_of_properties/work).
+
+- [Инструменты для работы с Викиданными](https://www.wikidata.org/wiki/Wikidata:Tools/)
+
+- [Интерфейс Quick Statements для редактирования Wikidata с помощью текстовых команд](https://quickstatements.toolforge.org/#/)
 
 ***
 
@@ -58,6 +85,8 @@ date: '2023-05-23'
 
 - [Статья "Викиданные" в Викитеке](https://ru.wikisource.org/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0:%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5)
 
+- [Защита страниц в Викиданных :cop:](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82:%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F_%D1%81_%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85#%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86_%D0%B2_%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
+
 **Популярным языком:**
 
 - Статья ["Сервис Викиданные для научных журналов"](https://podpiska.rfbr.ru/materials/wikidata4journals/), (2023).
@@ -66,9 +95,9 @@ date: '2023-05-23'
 
 - Семинар "Работа с метаданными" (12.10.2022) от Наукометрического центра ВШЭ. Видео YouTube, [про Викиданные с 25-ой минуты](https://youtu.be/XX6eT1ON4_I?t=1504).
 
-**Для тех, кто готов пойти дальше:**
+**Для тех, кто готов пойти дальше:** :trophy:
 
-- [Курс Программирование Викиданных (ПетрГУ)](https://ru.wikiversity.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) :trophy:
+- [Курс Программирование Викиданных (ПетрГУ)](https://ru.wikiversity.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%)
 
 [:top:](#mediawiki-action-api)
 
@@ -80,19 +109,19 @@ date: '2023-05-23'
 
 **`Wikipedia REST API`**
 
-Возвращает json с ID последней правки и подробным wiki-text HTML (infobox, ссылки с библиографическими деталями и т.д.).
+Возвращает json-структуру, содержащую идентификатор статьи, сведения о последней правке и элемент source, в котором находится полный текст страницы в формате вики-разметки ([что такое вики-разметка?](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9A%D0%B0%D0%BA_%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8)).
 
 >[`https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ`](https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ)
 
 **`MediaWiki Action API`**
 
-Возвращает в JSON текст, языковые версии, категории, ссылки на страницы Wikipedia, ссылка на внешние страницы, перечень изображений, секций, шаблонов, интер-вики ссылок и wikibase item (в properties)
+По сравнению с предыдущим запросом возвращает более детальную json-структуру, из которой легко извлечь текст, языковые версии, категории, ссылки на страницы Wikipedia, ссылка на внешние страницы, перечень изображений, секций, шаблонов, интер-вики ссылок и идентификатор элемента Викиданных, соответствующего статье (wikibase_item в разделе properties).
 
 >[`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&format=json)
 
 **`Wikimedia REST API`**
 
-Возвращает namespace, Wikibase ID, название, thumbnail, original image, последнюю правку с временной отметкой и ID, аннотацию (текст и HTML). 
+Возвращает не содержание статьи, а сведения о ней -- пространство имён (namespace), название, идентификатор элемента Викиданных, ссылки на основную иллюстрацию статьи, сведения о последней правке (временная отметка, ID), краткое описание в формате простого текста и HTML. 
 
 > [`https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ`](https://en.wikipedia.org/api/rest_v1/page/summary/The%20BMJ)
 
@@ -102,11 +131,17 @@ date: '2023-05-23'
 
 #### Другие названия объекта статьи
 
+Иногда предмету статьи могут соответствовать несколько названий -- в приведенном ниже примере запрос возвращает варианты названий журнала BMJ. 
+
 > [`https://en.wikipedia.org/w/api.php?action=query&prop=pageterms&titles=The%20BMJ&format=json`](https://en.wikipedia.org/w/api.php?action=query&prop=pageterms&titles=The%20BMJ&format=json)
 
 ***
 
 #### Все языковые версии статьи в Wikipedia
+
+:warning: Статья в Википедии может существовать как на одном, так и на нескольких языках, при этом содержимое языковых версий может сильно различаться. 
+
+Запросы ниже позволяют получить перечень всех языковых версий заданной статьи.
 
 **`Wikipedia REST API`**
 
@@ -124,9 +159,19 @@ date: '2023-05-23'
 
 #### Извлечь категории статьи
 
+Статьи Wikipedia нередко бывают отнесены к различным категориям.
+
 **`MediaWiki Action API`**
 
+Приведенный ниже запрос возвращает перечень категорий, к которым отнесена статья о журнале The BMJ в англоязычной Википедии.
+
 > [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=categories&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=categories&format=json)
+
+Одна из них -- "BMJ Group academic journals".
+
+:pushpin: Запрос ниже возвращает перечень статей, также отнесенных к категории BMJ Group academic journals ([подробнее](https://en.wikipedia.org/w/api.php?action=help&modules=query%2Bcategorymembers)).
+
+> [`https://en.wikipedia.org/w/api.php?cmtitle=Category:BMJ%20Group%20academic%20journals&action=query&list=categorymembers&cmlimit=500&cmprop=title|sortkey|timestamp&format=json`](https://en.wikipedia.org/w/api.php?cmtitle=Category:BMJ%20Group%20academic%20journals&action=query&list=categorymembers&cmlimit=500&cmprop=title|sortkey|timestamp&format=json)
 
 ***
 
@@ -134,7 +179,7 @@ date: '2023-05-23'
 
 **`MediaWiki Action API`**
 
-[Инструкция](https://www.mediawiki.org/wiki/API:Parsing_wikitext)
+[:blue_book: Инструкция](https://www.mediawiki.org/wiki/API:Parsing_wikitext)
 
 Возвращает перечень разделов страницы Wikipedia, их размер, порядковые номера и названия внутренних ссылок. 
 
@@ -147,6 +192,10 @@ date: '2023-05-23'
 ***
 
 #### Получить Wikidata ID по названию статьи в Wikipedia
+
+В отличие от Википедии, в которой не всякому академическому журналу полагается собственная статья ([см. статью Wikipedia:Notability_(academic_journals)](https://en.wikipedia.org/wiki/Wikipedia:Notability_(academic_journals))), создание и редактирование карточки журнала в Викиданных доступно каждому зарегистрированному пользователю ([при условии соблюдения правил](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%B8%D0%B9_%D1%81%D0%B2%D0%BE%D0%B4_%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB)). Типы объектов и отношений в Wikidata предлагают издателю широкий выбор инструментов для описания журнала -- истории его трансформаций, отношений с юридическими и физическими лицами, отражения опубликованных статей и т.д. ([подробнее в статье Сервис Викиланные для научных журналов](https://podpiska.rfbr.ru/materials/wikidata4journals/)).
+
+Запросы ниже позволяют для перечня статей Википедии собрать идентификаторы Викиданных.
 
 **`MediaWiki Action API`**
 
@@ -185,11 +234,13 @@ SELECT ?lemma ?item WHERE {
 
 #### Найти страницы Wikipedia по Wikidata ID
 
+Нередко можно столкнуться и с обратной задачей -- из какого-нибудь реестра собраны  идентификаторы Wikidata (например, OpenAlex или ROR) и необходимо собрать список существующих статей в Википедии.    
+
 **`MediaWiki Action API`**
 
 > [`https://www.wikidata.org/w/api.php?action=wbgetentities&format=xml&props=sitelinks&ids=Q3453517`](https://www.wikidata.org/w/api.php?action=wbgetentities&format=xml&props=sitelinks&ids=Q3453517)
 
-Добавляя выражения вида `&sitefilter=enwiki` можно ограничить результаты определенным языком.
+Добавление в запрос выражения вида `&sitefilter=enwiki` возвращает английскоязычную версию статьи (ruwiki -- русскоязычную).
 
 **`Wikidata SPARQL`**
 
@@ -211,7 +262,9 @@ SELECT DISTINCT ?article WHERE {
 
 **`Wikimedia REST API`**
 
-Сервис поддерживает также формат zotero и несколько других (mediawiki, wikibase). Цитируемый URL включает параметр oldid – идентификатор последней правки на момент цитирования! Обратите внимание на необходимость URL-кодирования гиперссылки страницы Wikipedia. Результат -- скачивание текстового файла с цитирование в выбранном формате.
+Сервис поддерживает также формат zotero и несколько других (mediawiki, wikibase). Цитируемый URL включает параметр oldid – идентификатор последней правки на момент цитирования! 
+
+:warning: Гиперссылку на страницу Wikipedia необходимо кодировать для URL. Результат -- скачивание текстового файла с цитированием в выбранном формате.
 
 > [`https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики`](https://en.wikipedia.org/api/rest_v1/data/citation/bibtex/https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FЖурнал_технической_физики)
 
@@ -221,17 +274,27 @@ SELECT DISTINCT ?article WHERE {
 
 ## Типовые задачи -- правки и просмотры
 
+Правки в статьи Википедию и в записи Викиданных могут вносить люди и боты, но история всех изменений доступна для просмотра. Подобная прозрачность, в сочетании с правилами противодействия [Вандализму](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%92%D0%B0%D0%BD%D0%B4%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC), [Войнам правок](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D0%BA) и другим негативным проявлениям человеческого несогласия, повышают доверие читателей.
+
 #### История правок статьи в Wikipedia
 
 **`Wikimedia REST API`**
 
-возвращает последнюю правку и имя последнего пользователя
+Запрос ниже возвращает последнюю правку и имя последнего пользователя
 
 > [`https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук`](https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук)
 
+**`MediaWiki Action API`**
+
+:pushpin: [Спецификация API](https://www.mediawiki.org/wiki/API:Revisions)
+
+Запрос ниже возвращает информацию о 5 правках, внесенных после 01 января 2021 года в статью Lancet в англоязычной Википедии.
+
+> [`https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Lancet&rvslots=main&rvlimit=5&rvdir=newer&rvstart=2021-01-01T00:00:00Z&rvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|content|tags|flagged&format=json`](https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Lancet&rvslots=main&rvlimit=5&rvdir=newer&rvstart=2021-01-01T00:00:00Z&rvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|content|tags|flagged&format=json)
+
 **`Wikipedia REST API`**
 
-возвращает историю правок с id изменения, временем правки, данными о создателе (id, name) и размером правок (delta).
+Запрос возвращает историю правок с id изменения, временем правки, данными о создателе (id, name), размером изменений (delta) и сопутствующими комментариями.
 
 > [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history)
 
@@ -239,24 +302,31 @@ SELECT DISTINCT ?article WHERE {
 
 Добавив в запрос выражение `?filter=...`, можно отобрать только определенные правки:  
 
-- reverted: правки, отменяющие более ранние изменения
-- anonymous: правки, сделанные анонимными пользователями (показывает IP), 
-- bot: правки, сделанные ботами, 
-- minor: правки, отмеченные как незначительные (minor edits)
+- `reverted`: правки, отменяющие более ранние изменения
+- `anonymous`: правки, сделанные анонимными пользователями (показывает IP), 
+- `bot`: правки, сделанные ботами, 
+- `minor`: правки, отмеченные как незначительные (minor edits)
 
 > [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&filter=anonymous`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history?older_than=97918317&filter=anonymous)
 
-Количество правок
+**Количество правок**
 
-> [`https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ/history/counts/edits?`](https://en.wikipedia.org/w/rest.php/v1/page/The%20BMJ/history/counts/edits?)
+:warning: В названии страницы необходимо предварительно заменить пробелы на _ (вместо The BMJ, не The%20BMJ, а The_BMJ) -- в сведениях о странице, возвращаемых Wikipedia REST API ([пример](https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ)), название в необходимом формате находится в поле key. В противном случае запрос вернет ошибку. 
 
-> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&to=97918317`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады%20Академии%20наук/history/counts/edits?from=88695017&to=97918317)
+> [`https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/edits`](https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/edits)
+
+> [`https://ru.wikipedia.org/w/rest.php/v1/page/Доклады_Академии_наук/history/counts/edits?from=88695017&to=97918317`](https://ru.wikipedia.org/w/rest.php/v1/page/Доклады_Академии_наук/history/counts/edits?from=88695017&to=97918317)
+
+:pushpin: **Количество редакторов**
+
+> [`https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/editors`](https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/editors)
+
 
 [:top:](#mediawiki-action-api)
 
 ***
 
-#### Список тех, кто правил страницу
+#### Список пользователей, которые правили страницу
 
 **`MediaWiki Action API`**
 
@@ -268,11 +338,27 @@ SELECT DISTINCT ?article WHERE {
 
 ***
 
+#### Список всех правок пользователя или с IP-адреса  
+
+**`MediaWiki Action API`**
+
+:pushpin: [:blue_book: API-спецификация](https://www.mediawiki.org/wiki/API:Allrevisions)
+
+> [`https://en.wikipedia.org/w/api.php?action=query&list=allrevisions&arvuser=Thinker78&arvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|tags|flagged`](https://en.wikipedia.org/w/api.php?action=query&list=allrevisions&arvuser=Thinker78&arvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|tags|flagged)
+
+Для получения текста правок добавьте в аргумент arvprop значение content.
+
+Для получения правок, сделанных с IP-адреса, используйте IP-адрес вмето имени пользователя в  аргументе `arvuser=...`  
+
+[:top:](#mediawiki-action-api)
+
+***
+
 #### Статистика просмотров страницы в Wikipedia 
 
-[:notebook: Инструкция](https://wikimedia.org/api/rest_v1/)
+[:blue_book: Инструкция](https://wikimedia.org/api/rest_v1/)
 
-Запросы должны иметь синтаксис вида `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/ {project}/{access}/{agent}/{article}/{granularity}/{start}/{end}`, в {article} необходимо заменить пробелы на _ и использовать URL-кодирование.    
+Запрос ниже возвращает количество просмотров статьи о журнале The BMJ в англоязычной Википедии с 01 января 2022 по 31 марта 2023 г.    
 
 >[`https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331`](https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331)
 
@@ -324,9 +410,11 @@ SELECT DISTINCT ?article WHERE {
 
 **`MediaWiki Action API`**
 
-[Инструкция](https://www.mediawiki.org/wiki/API:Exturlusage)
+[:blue_book: Инструкция](https://www.mediawiki.org/wiki/API:Exturlusage)
 
 Можно искать ссылки только в статьях определенного типа, используя выражение `&eunamespace=...` и определенные значения (0 -- Wikipedia Page, 1 -- Talk:Page, 2 -- Профили пользователей, 3 -- личные User talk страницы).
+
+Запрос ниже возвращает перечень статей Википедии (namespace = 0), в которых присутствуют гиперссылки на сайт издательства "Медиасфера".  
 
 > [`https://ru.wikipedia.org/w/api.php?action=query&format=json&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0`](https://ru.wikipedia.org/w/api.php?action=query&format=json&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0)
 
@@ -338,15 +426,19 @@ SELECT DISTINCT ?article WHERE {
 
 **`MediaWiki Action API`**
 
-[Инструкция](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Blinkshere)
+[:blue_book: Инструкция](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Blinkshere)
 
-> [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=linkshere&lhlimit=200&lhnamespace=0&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=linkshere&lhlimit=200&lhnamespace=0&format=json)
+Запрос ниже возвращает перечень статей в русскоязычной Википедии, в которых присутствует гиперссылка на статью о Журнале экспериментальной и теоретической физике (ЖЭТФ). 
+
+> [`https://ru.wikipedia.org/w/api.php?action=query&titles=Журнал_экспериментальной_и_теоретической_физики&prop=linkshere&lhlimit=200&lhnamespace=0&format=json`](https://ru.wikipedia.org/w/api.php?action=query&titles=%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB_%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%B8_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B8&prop=linkshere&lhlimit=200&lhnamespace=0&format=json)
 
 [:top:](#mediawiki-action-api)
 
 ***
 
-#### Ссылки на другие статьи Wikipedia с выбранной страницы Wikipedia 
+#### Гиперссылки из статьи Wikipedia, ведущие на другие статьи Wikipedia  
+
+Запрос ниже возвращает перечень статей Википедии, на которые ссылается выбранная статья. 
 
 **`MediaWiki Action API`**
 
@@ -356,15 +448,15 @@ SELECT DISTINCT ?article WHERE {
 
 #### Ссылки на внешние сайты с выбранной страницы Wikipedia 
 
-[Инструкция](https://www.mediawiki.org/wiki/API:Extlinks)
+[:blue_book: Инструкция](https://www.mediawiki.org/wiki/API:Extlinks)
 
 **`MediaWiki Action API`**
 
 > [`https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=extlinks&ellimit=500&elexpandurl=true&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The%20BMJ&prop=extlinks&ellimit=500&elexpandurl=true&format=json)
 
-Можно объединить ссылки с внутренними (на страницы Wikipedia), выбрав `prop=extlinks|links`.
+Можно объединить ссылки с внутренними (на страницы Wikipedia), указав `prop=extlinks|links`.
 
-[Альтернативный способ](https://www.mediawiki.org/wiki/API:Parsing_wikitext)
+**[Альтернативный способ]**(https://www.mediawiki.org/wiki/API:Parsing_wikitext)
 
 > [`https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=externallinks&format=json`](https://en.wikipedia.org/w/api.php?action=parse&page=The%20BMJ&prop=externallinks&format=json) 
 
@@ -372,9 +464,102 @@ SELECT DISTINCT ?article WHERE {
 
 ***
 
-## Наукометрия в Wikidata
+## "Наукометрия" в Wikidata
 
-#### Сбор Wikidata-сведений о журнале по ISSN
+Сведения о научных изданиях и публикациях непрерывно добавляются в Wikidata см. [раздел Journals в сервисе Mix'n'match](https://mix-n-match.toolforge.org/#/group/journals)  трудолюбивыми [ботами и энтузиастами](https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_MetaData), что упрощает их цитирование в статьях Wikipedia. Более того, [крупнейшие мировые издатели предоставляют бесплатный доступ](https://wikipedialibrary.wmflabs.org/) к своим полнотекстовым архивам для опытных редакторов Wikipedia.
+
+Цитирования статей в Википедии учитываются аналитическими инструментами ([Altmetric](https://www.altmetric.com/solutions/free-tools/bookmarklet/), [Plum Analytics](https://plumanalytics.com/), а также CrossRef (см. [Event Data API](https://www.crossref.org/services/event-data/)).   
+
+Связанность данных в Wikidata позволяет расширить диапазон возможностей для анализа научных журналов, публикаций, авторов (см. ссылки ниже). 
+
+- [:art: Профиль журнала ЖЭТФ в сервисе Reasonator / на основе Викиданных)](https://reasonator.toolforge.org/?q=Q23973)
+
+- [:art: Профиль журнала ЖЭТФ в сервисе Scholia / на основе Викиданных)](https://scholia.toolforge.org/venue/Q23973)
+
+И хотя сервис Wikidata, как источник сведений для библиометрического анализа, не может всерьез рассматриваться как альтернатива Web of Science или Scopus, он позволяет включить в анализ новые данные, которые в вышеупомянутых индексах цитирования отсутствуют. Запросы ниже призваны проиллюстрировать данный тезис.
+
+***
+
+#### Все российские журналы в Wikidata
+
+Запрос ниже возвращает список журналов, которые относятся к типу/подклассу Q5633421 (scientific journal) или Q737498 (academic journal), и для атрибута P495 (country of origin) имеют значение Russia (Q159). 
+
+:warning: если журнал в Wikidata отнесен к другому типу изданий, который не является подклассом Q5633421 или Q737498 (например, magazine), то такой журнал не будет найден. Так же запрос не обнаружит журналы, у которых поле P495 не заполнено или указывает на другую страну.  
+
+**`Wikidata SPARQL`**
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT DISTINCT ?journal ?name WHERE {
+  VALUES ?type {wd:Q5633421 wd:Q737498}
+  ?journal wdt:P31/wdt:P279* ?type;  wdt:P495 wd:Q159.     
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en, ru".
+    ?journal rdfs:label ?name .
+  }
+}
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3Fname%20WHERE%20%7B%0A%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D%0A%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%2a%20%3Ftype%3B%20%20wdt%3AP495%20wd%3AQ159.%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2C%20ru%22.%0A%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fname%20.%0A%20%20%7D%0A%7D)
+
+[:top:](#mediawiki-action-api)
+
+***
+
+#### Количество статей в Wikidata в российских журналах
+
+**`Wikidata SPARQL`**
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT ?journal ?journal_title (count(distinct(?item)) as ?count) 
+WITH {
+ SELECT DISTINCT ?journal ?journal_title 
+  WHERE {
+    VALUES ?type {wd:Q5633421 wd:Q737498}.
+           ?journal wdt:P31/wdt:P279 ?type; wdt:P495 wd:Q159.
+    SERVICE wikibase:label {
+      bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,ru". 
+      ?journal rdfs:label ?journal_title.
+      }
+    }
+} as %sss 
+WHERE {
+  INCLUDE %sss .
+  ?item wdt:P1433 ?journal; wdt:P31 wd:Q13442814.
+  }
+GROUP BY ?journal ?journal_title
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20%3Fjournal%20%3Fjournal_title%20%28count%28distinct%28%3Fitem%29%29%20as%20%3Fcount%29%20%0AWITH%20%7B%0A%20SELECT%20DISTINCT%20%3Fjournal%20%3Fjournal_title%20%0A%20%20WHERE%20%7B%0A%20%20%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%20%3Ftype%3B%20wdt%3AP495%20wd%3AQ159.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cru%22.%20%0A%20%20%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fjournal_title.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%20as%20%25sss%20%0AWHERE%20%7B%0A%20%20INCLUDE%20%25sss%20.%0A%20%20%3Fitem%20wdt%3AP1433%20%3Fjournal%3B%20wdt%3AP31%20wd%3AQ13442814.%0A%20%20%7D%0AGROUP%20BY%20%3Fjournal%20%3Fjournal_title%0A)
+
+[:top:](#mediawiki-action-api)
+
+***
+
+#### Извлечение источников заданного атрибута
+
+Согласно правилам Wikidata при присвоении значения атрибуту (Property) объекта рекомендуется указывать источник (Reference). Запрос ниже извлекает из карточки журнала Russian Chemical Reviews (Q3453517)  значения атрибута P236 (ISSN) и указанные для них источники типов P248 (ссылка на источник, который присутствует в Wikidata как описанный объект -- ЕГРЮЛ или перечень журналов ERA 2012) или P143 (извлечено из других Вики-сервисов -- Wikipedia).  
+
+**`Wikidata SPARQL`**
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT ?issn ?ref ?refLabel 
+WHERE {
+  wd:Q3453517 p:P236 [
+    ps:P236 ?issn; prov:wasDerivedFrom [
+      pr:P248|pr:P143 ?ref 
+    ]
+  ].
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20%3Fissn%20%3Fref%20%3FrefLabel%20%0AWHERE%20%7B%0A%20%20wd%3AQ3453517%20p%3AP236%20%5B%0A%20%20%20%20ps%3AP236%20%3Fissn%3B%20prov%3AwasDerivedFrom%20%5B%0A%20%20%20%20%20%20pr%3AP248%7Cpr%3AP143%20%3Fref%20%0A%20%20%20%20%5D%0A%20%20%5D.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0A%0A)
+
+[:top:](#mediawiki-action-api)
+
+#### Поиск журнала по ISSN в Wikidata и импорт сведений
+
+Запрос ниже находит элементы Wikidata, содержащие значения ISSN 1550-8943 и 0007-1447, и для каждого извлекает значения для широкого набора атрибутов. 
 
 **`Wikidata SPARQL`**
 
@@ -483,82 +668,11 @@ INCLUDE %sss .
 
 ***
 
-#### Все российские журналы в Wikidata
-
-**`Wikidata SPARQL`**
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-SELECT DISTINCT ?journal ?name WHERE {
-  VALUES ?type {wd:Q5633421 wd:Q737498}
-  ?country wdt:P17 wd:Q159.
-  ?journal wdt:P31/wdt:P279* ?type;  wdt:P495 ?country.     
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en, ru".
-    ?journal rdfs:label ?name .
-  }
-}
-```
-
-[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3Fname%20WHERE%20%7B%0A%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D%0A%20%20%3Fcountry%20wdt%3AP17%20wd%3AQ159.%0A%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%2a%20%3Ftype%3B%20%20wdt%3AP495%20%3Fcountry.%20%20%20%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2C%20ru%22.%0A%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fname%20.%0A%20%20%7D%0A%7D)
-
-[:top:](#mediawiki-action-api)
-
-***
-
-#### Количество статей в Wikidata в российских журналах
-
-**`Wikidata SPARQL`**
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-SELECT DISTINCT ?journal ?journal_title (count(?item) as ?count) 
-WITH {
- SELECT DISTINCT ?journal ?journal_title 
-  WHERE {
-    VALUES ?type {wd:Q5633421 wd:Q737498}.
-           ?journal wdt:P31/wdt:P279 ?type; wdt:P495 wd:Q159.
-    SERVICE wikibase:label {
-      bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,ru". 
-      ?journal rdfs:label ?journal_title.
-      }
-    }
-} as %sss 
-WHERE {
-  INCLUDE %sss .
-  ?item wdt:P1433 ?journal; wdt:P31 wd:Q13442814.
-  }
-GROUP BY ?journal ?journal_title
-```
-
-[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3Fjournal_title%20%28count%28%3Fitem%29%20as%20%3Fcount%29%20%0AWITH%20%7B%0A%20SELECT%20DISTINCT%20%3Fjournal%20%3Fjournal_title%20%0A%20%20WHERE%20%7B%0A%20%20%20%20VALUES%20%3Ftype%20%7Bwd%3AQ5633421%20wd%3AQ737498%7D.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%20%3Ftype%3B%20wdt%3AP495%20wd%3AQ159.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cru%22.%20%0A%20%20%20%20%20%20%3Fjournal%20rdfs%3Alabel%20%3Fjournal_title.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%20as%20%25sss%20%0AWHERE%20%7B%0A%20%20INCLUDE%20%25sss%20.%0A%20%20%3Fitem%20wdt%3AP1433%20%3Fjournal%3B%20wdt%3AP31%20wd%3AQ13442814.%0A%20%20%7D%0AGROUP%20BY%20%3Fjournal%20%3Fjournal_title%0A)
-
-[:top:](#mediawiki-action-api)
-
-***
-
-#### Извлечение источников заданного свойства
-
-**`Wikidata SPARQL`**
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-SELECT ?issn ?ref ?refLabel 
-WHERE {
-  wd:Q3453517 p:P236 [
-    ps:P236 ?issn; prov:wasDerivedFrom [
-      pr:P248|pr:P143 ?ref 
-    ]
-  ].
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-}
-
-```
-
-[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20%3Fissn%20%3Fref%20%3FrefLabel%20%0AWHERE%20%7B%0A%20%20wd%3AQ3453517%20p%3AP236%20%5B%0A%20%20%20%20ps%3AP236%20%3Fissn%3B%20prov%3AwasDerivedFrom%20%5B%0A%20%20%20%20%20%20pr%3AP248%7Cpr%3AP143%20%3Fref%20%0A%20%20%20%20%5D%0A%20%20%5D.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0A%0A)
-
-[:top:](#mediawiki-action-api)
-
-***
-
 #### Статьи из выбранного журнала и цитирующие их журналы
+
+Запрос ниже находит в Wikidata записи, соответствующие статьям из "Палеонтологического журнала" и имеющие значение DOI, и возвращает для каждой статьи название, перечень цитирующих журналов и общее количество цитирований.
+
+:warning: результат учитывает только статьи, которые имеют собственные элементы в Wikidata, отнесены к журналам через атрибут P1433 (published in) и связаны отношением P2860 (cites work).
 
 **`Wikidata SPARQL`**
 
@@ -588,17 +702,19 @@ ORDER BY ?itemLabel
 
 ***
 
-#### Список авторов выбранного журнала, имеющих ORCID
+#### Список авторов журнала, у которых указан ORCID
+
+Запрос ниже возвращает перечень авторов (P50 = author) статей (P1433 = published in) из "Палеонтологического журнала", имеющих атрибут ORCID (P496).
 
 **`Wikidata SPARQL`**
 
 ```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-SELECT DISTINCT ?author_id ?orcid_ ?author
+SELECT DISTINCT ?author_id ?orcid ?author
 WHERE {
    ?item wdt:P1433 wd:Q246955.
    optional{
-           ?item p:P50|p:P2093 ?author_statement .
-           ?author_statement ps:P50|ps:P2093 ?author_id .
+           ?item p:P50 ?author_statement .
+           ?author_statement ps:P50 ?author_id .
            ?author_id wdt:P496 ?orcid. }
   SERVICE wikibase:label {
     bd:serviceParam wikibase:language "[AUTO_LANGUAGE], en, ru".
@@ -607,13 +723,15 @@ WHERE {
 }
 ```
 
-[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor_id%20%3Forcid_%20%3Fauthor%0AWHERE%20%7B%0A%20%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955.%0A%20%20%20optional%7B%0A%20%20%20%20%20%20%20%20%20%20%20%3Fitem%20p%3AP50%7Cp%3AP2093%20%3Fauthor_statement%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_statement%20ps%3AP50%7Cps%3AP2093%20%3Fauthor_id%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_id%20wdt%3AP496%20%3Forcid.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2C%20en%2C%20ru%22.%0A%20%20%20%20%3Fauthor_id%20rdfs%3Alabel%20%3Fauthor%20.%0A%20%20%7D%0A%7D%0A)
+[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor_id%20%3Forcid%20%3Fauthor%0AWHERE%20%7B%0A%20%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955.%0A%20%20%20optional%7B%0A%20%20%20%20%20%20%20%20%20%20%20%3Fitem%20p%3AP50%20%3Fauthor_statement%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_statement%20ps%3AP50%20%3Fauthor_id%20.%0A%20%20%20%20%20%20%20%20%20%20%20%3Fauthor_id%20wdt%3AP496%20%3Forcid.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2C%20en%2C%20ru%22.%0A%20%20%20%20%3Fauthor_id%20rdfs%3Alabel%20%3Fauthor%20.%0A%20%20%7D%0A%7D%0A)
 
 [:top:](#mediawiki-action-api)
 
 ***
 
 #### Женщины-ученые с наградами, цитировавшие выбранный журнал
+
+Запрос ниже возвращает перечень авторов (P50 = автор) работ, цитирующих статьи (P2860 = cites work) из журнала "Молекулярная биология", имеющих награды (P166 = award received) и чей пол (P21 = gender) указан в Википедии как женский (Q6581072). Для каждого автора запрос возвращает объединенный перечень наград и значение идентификатора ORCID (при наличии).
 
 **`Wikidata SPARQL`**
 
@@ -652,7 +770,7 @@ WHERE {
 
 ***
 
-#### Российские ученые, имеющие ORCID и страницу в RU-Wikipedia
+#### Российские ученые, имеющие ORCID и статью в русскоязычной Wikipedia
 
 **`Wikidata SPARQL`**
 
@@ -662,21 +780,22 @@ SELECT DISTINCT ?author ?authorLabel ?orcid ?article
     ?author wdt:P31 wd:Q5; 
             wdt:P27 wd:Q159;
             wdt:P496 ?orcid.      
-    optional{?article schema:about ?author.
-         ?article schema:isPartOf <https://ru.wikipedia.org/>.
-           }
+    ?article schema:about ?author;
+             schema:isPartOf <https://ru.wikipedia.org/>.
 SERVICE wikibase:label { 
     bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" . }
 }
 ```
 
-[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor%20%3FauthorLabel%20%3Forcid%20%3Farticle%0A%20%20WHERE%20%7B%0A%20%20%20%20%3Fauthor%20wdt%3AP31%20wd%3AQ5%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP27%20wd%3AQ159%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP496%20%3Forcid.%20%20%20%20%20%20%0A%20%20%20%20optional%7B%3Farticle%20schema%3Aabout%20%3Fauthor.%0A%20%20%20%20%20%20%20%20%20%3Farticle%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E.%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0ASERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%20%7D%0A%7D%0A)
+[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fauthor%20%3FauthorLabel%20%3Forcid%20%3Farticle%0A%20%20WHERE%20%7B%0A%20%20%20%20%3Fauthor%20wdt%3AP31%20wd%3AQ5%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP27%20wd%3AQ159%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP496%20%3Forcid.%20%20%20%20%20%20%0A%20%20%20%20%3Farticle%20schema%3Aabout%20%3Fauthor%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E.%0ASERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22%20.%20%7D%0A%7D%0A)
 
 [:top:](#mediawiki-action-api)
 
 ***
 
-#### Исследователи младше 30 лет, имеющие статью в EN Wikipedia
+#### Исследователи младше 30 лет, имеющие статью в англоязычной Wikipedia
+
+Запрос ниже возвращает найденных в Wikidata людей, имеющих страницу в англоязычной Wikipedia, чей род занятий (P106 = occupation) указан как Q901 = scientist, и с указанной датой рождения, согласно которой возраст этих ученых на 23 мая 2023 года не превышал 30 лет. Запрос исключает людей, у которых присутствует значение атрибута P570 = date of death. 
 
 **`Wikidata SPARQL`**
 
@@ -703,7 +822,111 @@ ORDER BY ?itemLabel
 
 ***
 
-#### Перечень университетов, расположенных в <=500 метрах от метро
+#### Исследователи, цитировавшие статьи из журнала со списком цитирующих и процитированных статей
+
+Запрос находит список элементов Wikidata, соответствующих авторам статей с DOI (P356), цитировавших статьи (также имеющие DOI) из журнала Russian Journal of Organic Chemistry. Для каждого автора возвращаются ORCID, список DOI цитирующих публикаций, список DOI и количество процитированных статей из искомого журнала. 
+
+**`Wikidata SPARQL`**
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT DISTINCT ?citing_author ?citing_authorLabel 
+     (GROUP_CONCAT(DISTINCT ?orcid; separator = "; ") as ?orcids_yes_sometimes_few)
+     (GROUP_CONCAT(DISTINCT ?citing_doi; separator = "; ") as ?list_of_citing_dois)
+     (COUNT(DISTINCT ?doi) AS ?n_dois)
+     (GROUP_CONCAT(DISTINCT ?doi; separator = "; ") as ?list_of_cited_dois)
+WHERE {
+  ?item wdt:P1433 wd:Q3453520;
+        wdt:P356 ?doi. 
+  ?citing_work wdt:P2860 ?item; 
+        wdt:P50 ?citing_author;
+        wdt:P356 ?citing_doi.
+ optional{?citing_author wdt:P496 ?orcid.} 
+  SERVICE wikibase:label { 
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
+    }      
+  }
+GROUP BY ?citing_authorLabel ?citing_author 
+ORDER BY DESC(?n_dois)
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fciting_author%20%3Fciting_authorLabel%20%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Forcid%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Forcids_yes_sometimes_few%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_doi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_citing_dois%29%0A%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fdoi%29%20AS%20%3Fn_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_cited_dois%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ3453520%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fciting_doi.%0A%20optional%7B%3Fciting_author%20wdt%3AP496%20%3Forcid.%7D%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%7D%20%20%20%20%20%20%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_authorLabel%20%3Fciting_author%20%0AORDER%20BY%20DESC%28%3Fn_dois%29%0A%0A)
+
+[:top:](#mediawiki-action-api)
+
+***
+
+#### Перечень организаций, сотрудники которых цитировали статьи из выбранного журнала
+
+Запрос ниже возвращает перечень организаций, чьи сотрудники (P108 = employer) в своих работах (P50 = author) цитировали (P2860 = cites work) статьи из журнала "Вестник офтальмологии". Для каждой организации возвращается страна, количество процитированных публикаций из журнала "Вестник офтальмологии" и их названия.   
+
+**`Wikidata SPARQL`**
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT DISTINCT ?citing_organizationLabel ?citing_countryLabel 
+       (COUNT(DISTINCT ?item) AS ?n_items)
+       (GROUP_CONCAT(DISTINCT ?itemLabel; separator = " | ") as ?list_of_items)
+WHERE {
+  ?item wdt:P1433 wd:Q27713783;
+        rdfs:label ?itemLabel.
+  FILTER (LANG (?itemLabel) = "en" ). 
+  ?citing_work wdt:P2860 ?item; 
+        wdt:P50 ?citing_author . 
+  ?citing_author wdt:P108 ?citing_organization . 
+  ?citing_organization wdt:P17 ?citing_country.
+  SERVICE wikibase:label { 
+    bd:serviceParam wikibase:language "en".
+  }
+  }
+GROUP BY ?citing_organizationLabel ?citing_countryLabel
+ORDER BY DESC (?n_items)
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%20%0A%20%20%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fitem%29%20AS%20%3Fn_items%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FitemLabel%3B%20separator%20%3D%20%22%20%7C%20%22%29%20as%20%3Flist_of_items%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ27713783%3B%0A%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FitemLabel.%0A%20%20FILTER%20%28LANG%20%28%3FitemLabel%29%20%3D%20%22en%22%20%29.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20wdt%3AP108%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%0A%20%20%7D%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%0AORDER%20BY%20DESC%20%28%3Fn_items%29)
+
+[:top:](#mediawiki-action-api)
+
+***
+
+#### Статьи из журнала и процитировавшие их организации и страны
+
+Запрос возвращает элементы Wikidata, соответствующие публикациям из "Палеонтологического журнала", которые были процитированы другими публикациями (также имеющими записи в Wikidata). Для каждой статьи искомого журнала, имеющей цитирование, приведено название статьи, количество организаций публикаций, 
+
+**`Wikidata SPARQL`**
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT DISTINCT ?doi ?title 
+    (COUNT(DISTINCT ?citing_work) AS ?n_cites)
+    (GROUP_CONCAT(DISTINCT ?citing_organizationLabel; separator = "; ") as ?citing_orgs)
+    (GROUP_CONCAT(DISTINCT ?citing_countryLabel; separator = "; ") as ?citing_countries)
+WHERE {
+  ?item wdt:P1433 wd:Q246955;
+        wdt:P356 ?doi. 
+  ?citing_work wdt:P2860 ?item; 
+        wdt:P50 ?citing_author . 
+  ?citing_author wdt:P108 ?citing_organization . 
+  ?citing_organization wdt:P17 ?citing_country.
+  SERVICE wikibase:label { 
+    bd:serviceParam wikibase:language "en". 
+    ?citing_organization rdfs:label ?citing_organizationLabel.
+    ?citing_country rdfs:label ?citing_countryLabel.
+    ?item rdfs:label ?title.
+   }      
+ }
+GROUP BY ?doi ?title
+ORDER BY DESC(?n_cited)
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fdoi%20%3Ftitle%20%0A%20%20%20%20%28COUNT%28DISTINCT%20%3Fciting_work%29%20AS%20%3Fn_cites%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_organizationLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Fciting_orgs%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_countryLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Fciting_countries%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20wdt%3AP108%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%0A%20%20%20%20%3Fciting_organization%20rdfs%3Alabel%20%3Fciting_organizationLabel.%0A%20%20%20%20%3Fciting_country%20rdfs%3Alabel%20%3Fciting_countryLabel.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Ftitle.%0A%20%20%20%7D%20%20%20%20%20%20%0A%20%7D%0AGROUP%20BY%20%3Fdoi%20%3Ftitle%0AORDER%20BY%20DESC%28%3Fn_cited%29%0A)
+
+[:top:](#mediawiki-action-api)
+
+***
+
+#### Карта университетов Москвы, расположенных в <=500 метрах от станций метро
+
+Запрос возращает карту с расположением элементов Викиданных типа университет (Q3918), расположенных (P625 = coordinate location) в радиусе 0.5 км от станций метро (Q928830).   
+
+Для того, чтобы увидеть перечень результатов в виде таблицы, измените #defaultView в начале запроса на Table (или воспользуйтесь выпадающим меню, расположенным над картой с левой стороны).
 
 **`Wikidata SPARQL`**
 
@@ -732,100 +955,14 @@ SELECT ?place ?placeLabel ?subwayLabel ?location WHERE
 
 ***
 
-#### Перечень организаций, цитировавших статьи из выбранного журнала
-
-**`Wikidata SPARQL`**
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-SELECT DISTINCT ?citing_organizationLabel ?citing_countryLabel 
-     (COUNT(DISTINCT ?doi) AS ?n_dois)
-     (GROUP_CONCAT(DISTINCT ?doi; separator = "; ") as ?list_of_dois)
-WHERE {
-  ?item wdt:P1433 wd:Q246955;
-        wdt:P356 ?doi. 
-  ?citing_work wdt:P2860 ?item; 
-        wdt:P50 ?citing_author . 
-  ?citing_author (wdt:P108|wdt:P1416) ?citing_organization . 
-  ?citing_organization wdt:P17 ?citing_country.
-  SERVICE wikibase:label { 
-    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
-    }      
-  }
-GROUP BY ?citing_organizationLabel ?citing_countryLabel
-ORDER BY DESC(?n_dois)
-```
-
-[отправить через Wikidata Query Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%20%0A%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fdoi%29%20AS%20%3Fn_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_dois%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20%28wdt%3AP108%7Cwdt%3AP1416%29%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%7D%20%20%20%20%20%20%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_organizationLabel%20%3Fciting_countryLabel%0AORDER%20BY%20DESC%28%3Fn_dois%29%0A)
-
-[:top:](#mediawiki-action-api)
-
-***
-
-#### Исследователи, цитировавшие статьи из журнала со списком цитирующих и процитированных статей
-
-**`Wikidata SPARQL`**
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-SELECT DISTINCT ?citing_authorLabel ?orcid
-     (COUNT(DISTINCT ?doi) AS ?n_dois)
-     (GROUP_CONCAT(DISTINCT ?doi; separator = "; ") as ?list_of_cited_dois)
-     (GROUP_CONCAT(DISTINCT ?citing_doi; separator = "; ") as ?list_of_citing_dois)
-WHERE {
-  ?item wdt:P1433 wd:Q246955;
-        wdt:P356 ?doi. 
-  ?citing_work wdt:P2860 ?item; 
-        wdt:P50 ?citing_author;
-        wdt:P356 ?citing_doi.
- optional{?citing_author wdt:P496 ?orcid.} 
-  SERVICE wikibase:label { 
-    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
-    }      
-  }
-GROUP BY ?citing_authorLabel ?orcid
-ORDER BY DESC(?n_dois)
-```
-
-[отправить через Wikidata Query Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fciting_authorLabel%20%3Forcid%0A%20%20%20%20%20%28COUNT%28DISTINCT%20%3Fdoi%29%20AS%20%3Fn_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdoi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_cited_dois%29%0A%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_doi%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_citing_dois%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fciting_doi.%0A%20optional%7B%3Fciting_author%20wdt%3AP496%20%3Forcid.%7D%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%7D%20%20%20%20%20%20%0A%20%20%7D%0AGROUP%20BY%20%3Fciting_authorLabel%20%3Forcid%0AORDER%20BY%20DESC%28%3Fn_dois%29%0A%0A)
-
-[:top:](#mediawiki-action-api)
-
-***
-
-#### Статьи из журнала и цитирующие их организации и страны
-
-**`Wikidata SPARQL`**
-
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-SELECT DISTINCT ?doi ?itemLabel 
-    (COUNT(DISTINCT ?citing_work) AS ?n_cited)
-    (GROUP_CONCAT(DISTINCT ?citing_organizationLabel; separator = "; ") as ?list_of_orgs)
-    (GROUP_CONCAT(DISTINCT ?citing_countryLabel; separator = "; ") as ?list_of_countries)
-WHERE {
-  ?item wdt:P1433 wd:Q246955;
-        wdt:P356 ?doi. 
-  ?citing_work wdt:P2860 ?item; 
-        wdt:P50 ?citing_author . 
-  ?citing_author (wdt:P108|wdt:P1416) ?citing_organization . 
-  ?citing_organization wdt:P17 ?citing_country.
-  SERVICE wikibase:label { 
-    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
-    ?citing_organization rdfs:label ?citing_organizationLabel.
-    ?citing_country rdfs:label ?citing_countryLabel.
-    ?item rdfs:label ?itemLabel.
-   }      
- }
-GROUP BY ?doi ?itemLabel
-ORDER BY DESC(?n_cited)
-```
-
-[отправить через Wikidata Query Service](https://query.wikidata.org/index.html#SELECT%20DISTINCT%20%3Fdoi%20%3FitemLabel%20%0A%20%20%20%20%28COUNT%28DISTINCT%20%3Fciting_work%29%20AS%20%3Fn_cited%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_organizationLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_orgs%29%0A%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fciting_countryLabel%3B%20separator%20%3D%20%22%3B%20%22%29%20as%20%3Flist_of_countries%29%0AWHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP1433%20wd%3AQ246955%3B%0A%20%20%20%20%20%20%20%20wdt%3AP356%20%3Fdoi.%20%0A%20%20%3Fciting_work%20wdt%3AP2860%20%3Fitem%3B%20%0A%20%20%20%20%20%20%20%20wdt%3AP50%20%3Fciting_author%20.%20%0A%20%20%3Fciting_author%20%28wdt%3AP108%7Cwdt%3AP1416%29%20%3Fciting_organization%20.%20%0A%20%20%3Fciting_organization%20wdt%3AP17%20%3Fciting_country.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%0A%20%20%20%20%3Fciting_organization%20rdfs%3Alabel%20%3Fciting_organizationLabel.%0A%20%20%20%20%3Fciting_country%20rdfs%3Alabel%20%3Fciting_countryLabel.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel.%0A%20%20%20%7D%20%20%20%20%20%20%0A%20%7D%0AGROUP%20BY%20%3Fdoi%20%3FitemLabel%0AORDER%20BY%20DESC%28%3Fn_cited%29%0A)
-
-[:top:](#mediawiki-action-api)
-
 ## Обратная связь
 
-Если сделаете pull request, постараюсь принять.   
+Если сделаете pull request, постараюсь принять.  
 
-## Лицензия
+#### Лицензия
 
-**Знания -- людям!**
+Знание -- людям!
+
+#### Позиция по поводу Википедии
+
+Я убежден в том, что возможности Вики-сервисов (Wikipedia, Wikidata и др.) должны изучаться для того, чтобы знать "как оно может быть". Надеюсь, что после ознакомления с перечисленными в данном материале возможностями Вики-сервисов, читатели смогут по-новому взглянуть на практическую ценность любых других онлайн-ресурсов (особенно тех, которыми предлагается импортозамещать Wikipedia).
