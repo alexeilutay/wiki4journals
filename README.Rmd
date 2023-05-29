@@ -5,7 +5,7 @@ output:
   github_document:
     toc: yes
     toc_depth: 4
-date: '2023-05-28'
+date: '2023-05-29'
 ---
 
 Цель этого сборника примеров -- обратить внимание на уникальные возможности API- и SPARQL-интерефейсов сервисов Wikipedia и Wikidata. Большая часть примеров тематически связана с академическими журналам, поскольку материал был написан для доклада на 11-ой Международной научно-практической конференции Ассоциации научных редакторов и издателей (АНРИ) «Научное издание международного уровня – 2023: достижения, реалии, перспективы» (23-26 мая, 2023 г.). 
@@ -74,8 +74,6 @@ date: '2023-05-28'
 - [Список атрибутов](https://www.wikidata.org/wiki/Wikidata:List_of_properties). Академические издатели найдут атрибуты для описания журналов, статей и авторов в разделах [research](https://www.wikidata.org/wiki/Wikidata:List_of_properties/research), [science](https://www.wikidata.org/wiki/Wikidata:List_of_properties/science), [unique identifier](https://www.wikidata.org/wiki/Wikidata:List_of_properties/unique_identifier), [work](https://www.wikidata.org/wiki/Wikidata:List_of_properties/work).
 
 - [Инструменты для работы с Викиданными](https://www.wikidata.org/wiki/Wikidata:Tools/)
-
-- [Интерфейс Quick Statements для редактирования Wikidata с помощью текстовых команд](https://quickstatements.toolforge.org/#/)
 
 ***
 
@@ -466,9 +464,11 @@ SELECT DISTINCT ?article WHERE {
 
 ## "Наукометрия" в Wikidata
 
-Сведения о научных изданиях и публикациях непрерывно добавляются в Wikidata см. [раздел Journals в сервисе Mix'n'match](https://mix-n-match.toolforge.org/#/group/journals)  трудолюбивыми [ботами и энтузиастами](https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_MetaData), что упрощает их цитирование в статьях Wikipedia. Более того, [крупнейшие мировые издатели предоставляют бесплатный доступ](https://wikipedialibrary.wmflabs.org/) к своим полнотекстовым архивам для опытных редакторов Wikipedia.
+Сведения о научных изданиях и публикациях непрерывно добавляются в Wikidata см. [раздел Journals в сервисе Mix'n'match](https://mix-n-match.toolforge.org/#/group/journals)  трудолюбивыми ботами и энтузиастами (см. [1](https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_MetaData), [2](https://meta.wikimedia.org/wiki/WikiCite/Projects), что [упрощает их цитирование в статьях Wikipedia](https://en.wikipedia.org/wiki/Template:Cite_Q). 
 
-Цитирования статей в Википедии учитываются аналитическими инструментами ([Altmetric](https://www.altmetric.com/solutions/free-tools/bookmarklet/), [Plum Analytics](https://plumanalytics.com/), а также CrossRef (см. [Event Data API](https://www.crossref.org/services/event-data/)).   
+Более того, [крупнейшие мировые издатели предоставляют бесплатный доступ](https://wikipedialibrary.wmflabs.org/) к своим полнотекстовым архивам для опытных редакторов Wikipedia. Не только потому, что это [источник трафика](http://chronograph.labs.crossref.org/domain.html?domain=en.wikipedia.org), но и потому, что Википедию читают в том числе и люди вне академической среды, которые оценят готовые ссылки на научные источники (журналисты, лоббисты, просветители, волонтеры, школьники, учителя и другие категории небезразличных и незащищенных от информационного воздействия граждан).    
+
+Цитирования статей в Википедии учитываются аналитическими инструментами ([Altmetric](https://www.altmetric.com/solutions/free-tools/bookmarklet/), [Plum Analytics](https://plumanalytics.com/), а также CrossRef (см. [Event Data API](https://www.crossref.org/services/event-data/) и [Relations API](https://community.crossref.org/t/relationships-are-here/3523)).   
 
 Связанность данных в Wikidata позволяет расширить диапазон возможностей для анализа научных журналов, публикаций, авторов (см. ссылки ниже). 
 
@@ -955,6 +955,202 @@ SELECT ?place ?placeLabel ?subwayLabel ?location WHERE
 
 ***
 
+## Практика -- как вносить сведения в Wikidata?  
+
+Ответы на этот вопрос частично освещены в статьях:
+
+- ["Сервис Викиданные для научных журналов"](https://podpiska.rfbr.ru/materials/wikidata4journals/), (2023).
+
+- ["О профилях организаций в Wikidata"](https://openriro.github.io/posts/wikidata-profile/), (2022).
+
+Можно выделить 3 подхода:
+
+(а) "ручками". Профиль журнала, главного редактора, организации-учредителя быстрее всего поправить именно так. С помощью поисковых запросов в интерфейсе Wikidata проверьте, существует ли уже профиль (поиск по вариантам названия, ФИО, ORCID, ISSN). Если профиля нет, смело нажимайте Creare a new item (Создать новый элемент) в меню левой панели.  При создании достаточно указать язык описания, название, краткое описание и варианты названий (потом вы сможете изменить все эти поля или добавить новые). 
+
+Порог входа -- зарегистрироваться в Wikidata. При создании полей ориентируйтесь на рекомендации в статьях выше и примеры оформления других журналов.
+
+(б) через специальные инструменты Wikidata. После преодоления порога в 50 правок пользователи аккаунтов старше 4 дней приобретают статус [Autoconfirmed Users](https://www.wikidata.org/wiki/Wikidata:Autoconfirmed_users) (в рускоязычной версии статьи указан порог [в 15 правок](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%90%D0%B2%D1%82%D0%BE%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D1%91%D0%BD%D0%BD%D1%8B%D0%B5_%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B8)). В любом случае этот порог преодолется незаметно при заполнении первых карточек.   
+
+А далее в вашем распоряжении появятся множество инструментов для редактирования Викиданных, из которых кратко рассмотрим два: [Quick Statements](https://quickstatements.toolforge.org) и [SourceMD](https://sourcemd.toolforge.org/index_old.php), которые чуть подробнее рассмотрим ниже.
+
+(в) через API-интерфейс [Swagger API документация](https://doc.wikimedia.org/Wikibase/master/js/rest-api/). Если вы умеете пользоваться REST API, дополнительные комментарии не требуются. Если же это ваше первое столкновение с методами REST API, прежде чем править Викиданные, хорошенько изучите инструкции, начните тренировки с безопасного метода (GET) и потом "поиграйте в [песочнице"](https://www.wikidata.org/wiki/Q4115189), в которую можно вносить правки.   
+
+***
+
+#### :pushpin: Quick Statements
+
+- [https://quickstatements.toolforge.org](https://quickstatements.toolforge.org)
+
+Этот сервис позволяет вносит изменения в Wikidata без опыта работы с API и головоломными :grimacing: механизмами авторизации.
+
+- [Подробное описание работы с QuickStatements на английском языке](https://www.wikidata.org/wiki/Help:QuickStatements)
+
+Для работы пользователь должен иметь статус Autoconfirmed user, предварительно авторизоваться в Wikidata и дать разрешения всплывающим запросам. Если после авторизации вы видите имя своего пользователя в правом углу и после нажатия на New Batch видите поле для ввода, значит интерфейс готов к работе. За кнопкой с именем пользователя скрывается приятный сюрприз :wink: для, кто умеет использовать API.
+
+**Небольшой пример:** 
+
+Внесем в карточку пользователя Q118779563 2 новых свойства: идентификатор автора в OpenAlex. Синтаксис QuickStatements очень прост -- в одной строке, через табуляцию или знак "|", перечисляются entity|property|value, что для нашей задачи приводит к строкам следующего вида:
+ 
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+Q118779563|P10283|"A2638483588"
+```
+
+Нажимаем Import V1 Commands, в открывшемся интерфейсе проверяем, что будет сформировано, после чего нажимаем Run in background (система предложить назвать данный набор правок. Например, "OA id for Q118779563"). Если наверху появится Status DONE и индикатор прогресса целиком зеленый и показывает 100%, значит, результат достигнут.
+
+Проверяем:
+
+*способ 0*
+
+Открыв карточку [Q118779563](https://www.wikidata.org/wiki/Q118779563)
+
+*способ 1*
+
+Поиском A2638483588 в интерфейсе Wikidata
+
+*способ 2*
+
+**`Wikidata SPARQL`**
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT ?person ?openalex_id
+   WHERE {
+     VALUES ?person {wd:Q118779563}
+     ?person wdt:P10283 ?openalex_id.
+     }
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/index.html#SELECT%20%3Fperson%20%3Fopenalex_id%0A%20%20%20WHERE%20%7BVALUES%20%3Fperson%20%7Bwd%3AQ118779563%7D%0A%20%20%20%20%20%3Fperson%20wdt%3AP10283%20%3Fopenalex_id.%0A%20%7D)
+
+*способ 3*
+
+**`Wikidata API`**
+
+>[`https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q118779563/statements?property=P10283`](https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q118779563/statements?property=P10283)
+
+***
+
+#### :pushpin: SourceMD
+
+- [Новая версия](https://sourcemd.toolforge.org/) - (*прим. у автора капризничает с авторизацией*). 
+
+- [Старая версия](https://sourcemd.toolforge.org/index_old.php) :point_left:
+
+Этот сервис многократно облегчает задачу по переносу метаданных статей из CrossRef в Викиданные.
+
+- вносим список DOI (1 doi в строке)
+- нажимаем Check source
+- сервис проверяет по DOI наличие статей в Wikidata.
+
+Если публикация уже присутствует в Wikidata, то сверху над полем появится формулировка вида
+
+> Other sources with these identifiers exist: Q....
+Trying to update values of Q....; this will not change existing ones.
+
+для отсутствующих предлагает внести базовые сведения в формате Quick Statements (см. :point_up:), с той разницей, что в качестве разделителя вместо | используется табуляций (оба варианта подходят для QuickStatements).
+
+Пример добавления статьи 10.24069/SEP-22-40 
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+CREATE
+LAST	P356	"10.24069/SEP-22-40"
+LAST	P31	Q13442814
+LAST	P1476	en:"Tabular form of description of statistical methods and programs in scientific publications"
+LAST	Len	"Tabular form of description of statistical methods and programs in scientific publications"
+LAST	P433	"2"
+LAST	P304	"182-184"
+LAST	P478	"7"
+LAST	P577	+2023-04-14T00:00:00Z/11
+LAST	P1433	Q96728083
+LAST	P2093	"N. N. Khromov-Borisov"	P1545	"1"
+```
+
+Если ввести несколько DOI, то сервис вернет фрагменты для отдельных статей, расположенные друг над другом. Блок каждой статьи начинается с CREATE, который "дает команду" создать запись, к которой будут применены инструкции в следующих строках, начинающихся с LAST. 
+
+Какие атрибуты будут созданы?
+
+- P31 (тип элемента) = scholarly article [Q13442814](https://www.wikidata.org/wiki/Q13442814)
+
+- P1476 (тип элемента) = [title](https://www.wikidata.org/wiki/Property:P1476), с указанием языка (en)
+
+- Len - это Label на английском, который отражается в заголовках Wikidata карточек.
+
+- P478 (том) = [volume](https://www.wikidata.org/wiki/Property:P478)
+
+- P433 (выпуск) = [issue](https://www.wikidata.org/wiki/Property:P433)
+
+- P304 (страницы) = [pages](https://www.wikidata.org/wiki/Property:P304)
+
+- P577 (дата публикации) = [publication date](https://www.wikidata.org/wiki/Property:P577)
+
+- P1433 (опубликовано в) = [published in](https://www.wikidata.org/wiki/Property:P1433). :warning: Поскольку в Wikidata уже существует карточка журнала с указанием ISSN и в метаданных CrossRef есть ISSN, то атрибут P1433 сразу связывает статьи с записью журнала [Q96728083](https://www.wikidata.org/wiki/Q96728083).
+
+- P2093 (строка с указанием имени автора) = [author string](https://www.wikidata.org/wiki/Property:P2093) с указанием P1545 (порядковый номер автора). 
+
+Обратите внимание, что будет создана не связь с карточкой автора (сервис не распознает авторов по фамилии), а только текстовое значение.
+
+:warning: если вы вносите статьи конкретного автора и у него уже создана карточка в Wikidata, тогда можно прямо в окне SourceMD добавить ещё одну строку (прямо под LAST P2093...) с инструкцией вида `LAST P50 {Wikidata ID автора} P1545...`
+
+Получится вот так
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+CREATE
+LAST	P356	"10.24069/SEP-22-40"
+LAST	P31	Q13442814
+LAST	P1476	en:"Tabular form of description of statistical methods and programs in scientific publications"
+LAST	Len	"Tabular form of description of statistical methods and programs in scientific publications"
+LAST	P433	"2"
+LAST	P304	"182-184"
+LAST	P478	"7"
+LAST	P577	+2023-04-14T00:00:00Z/11
+LAST	P1433	Q96728083
+LAST	P2093	"N. N. Khromov-Borisov"	P1545	"1"
+LAST	P50 Q70155088	P1545	"1"
+```   
+
+Нажимаем кнопку Open in Quick Statements, в открывшемся интерфейсе проверяем, что будет сформировано, после чего нажимаем Run in background (система предложить назвать данный набор правок. Например, "article 1"). Если наверху появится Status DONE и индикатор прогресса будет показывать 100%, то всё -- статья внесена в Wikidata.  
+
+Как найти созданную статью?
+
+В карточке автора статья не отражается, поскольку это не статья является атрибутом автора, а наоборот -- автор выступает в качестве атрибута статьи (спасибо, что не [AMDG](https://ru.wikipedia.org/wiki/Ad_majorem_Dei_gloriam) по умолчанию).
+
+*способ 1*
+
+Поиском 10.24069/SEP-22-40 в интерфейсе Wikidata
+
+*Способ 2*
+
+Выполнив поиск по DOI в Wikidata или с помощью SPARQL запроса (пример ниже).
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+SELECT ?article ?doi 
+   WHERE {
+     VALUES ?doi {"10.24069/SEP-22-40"}
+     ?article wdt:P356 ?doi.
+     }
+```
+
+[отправить через Wikidata Query Service](https://query.wikidata.org/#SELECT%20%3Farticle%20%3Fdoi%20%0A%20WHERE%20%7B%0A%20%20%20%20VALUES%20%3Fdoi%20%7B%2210.24069%2FSEP-22-40%22%7D%0A%20%20%20%20%3Farticle%20wdt%3AP356%20%3Fdoi.%0A%7D)
+
+Идентификатор созданной статьи -- [Q118798976](https://www.wikidata.org/wiki/Q118798976).
+
+***
+
+Итак, оптимальная стратегия примерно следующая:
+
+1) регистрируем профиль в Wikidata
+
+2) создаем/редактируем вручную индивидуальные карточки журналов, организации-учредителя, редактора, пока не достигнем статус Autoconfirmed (отражается в меню Preferences Wikidata / раздел Basic information > Member of groups). 
+
+3) проверяем готовность к работе QuickStatements (разрешения) 
+
+4) вносим DOI через SourceMD
+
+5) вносим атрибуты статей и авторов через QuickStatements (их можно готовить в любом текстовом или колоночном редакторе).
+
+Созданными профилями любуемся в сервисе [Scholia](https://scholia.toolforge.org).
+
+***
+
 ## Обратная связь
 
 Если сделаете pull request, постараюсь принять.  
@@ -966,3 +1162,4 @@ SELECT ?place ?placeLabel ?subwayLabel ?location WHERE
 #### Позиция по поводу Википедии
 
 Я убежден в том, что возможности Вики-сервисов (Wikipedia, Wikidata и др.) должны изучаться для того, чтобы знать "как оно может быть". Надеюсь, что после ознакомления с перечисленными в данном материале возможностями Вики-сервисов, читатели смогут по-новому взглянуть на практическую ценность любых других онлайн-ресурсов (особенно тех, которыми предлагается импортозамещать Wikipedia).
+
