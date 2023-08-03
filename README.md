@@ -94,13 +94,8 @@
     Wikidata?](#практика--как-вносить-сведения-в-wikidata)
     -   [:pushpin: Quick Statements](#pushpin-quick-statements)
     -   [:pushpin: SourceMD](#pushpin-sourcemd)
-<<<<<<< HEAD
 -   [:pushpin: Приложение 1. Энциклопедия
     Руниверсалис](#pushpin-приложение-1-энциклопедия-руниверсалис)
-=======
--   [Приложение 1. Энциклопедия
-    Руниверсалис](#приложение-1-энциклопедия-руниверсалис)
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
     -   [Информация о статье](#информация-о-статье)
     -   [Извлечь разделы статьи](#извлечь-разделы-статьи)
     -   [Извлечь категории статьи](#извлечь-категории-статьи-1)
@@ -117,12 +112,7 @@
         энциклопедии](#гиперссылки-из-статьи-ведущие-на-другие-статьи-энциклопедии)
     -   [Ссылки на внешние сайты с выбранной
         страницы](#ссылки-на-внешние-сайты-с-выбранной-страницы)
-<<<<<<< HEAD
 -   [:pushpin: Приложение 2. РУВИКИ](#pushpin-приложение-2-рувики)
-=======
--   [Приложение 2. РУВИКИ](#приложение-2-рувики)
--   [Приложение 3. Циклопедия](#приложение-3-циклопедия)
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
     -   [Информация о статье](#информация-о-статье-1)
     -   [Извлечь разделы статьи](#извлечь-разделы-статьи-1)
     -   [Извлечь категории статьи](#извлечь-категории-статьи-2)
@@ -139,7 +129,6 @@
         энциклопедии](#гиперссылки-из-статьи-ведущие-на-другие-статьи-энциклопедии-1)
     -   [Ссылки на внешние сайты с выбранной
         страницы](#ссылки-на-внешние-сайты-с-выбранной-страницы-1)
-<<<<<<< HEAD
 -   [:pushpin: Приложение 3.
     Циклопедия](#pushpin-приложение-3-циклопедия)
     -   [Информация о статье](#информация-о-статье-2)
@@ -158,8 +147,24 @@
         энциклопедии](#гиперссылки-из-статьи-ведущие-на-другие-статьи-энциклопедии-2)
     -   [Ссылки на внешние сайты с выбранной
         страницы](#ссылки-на-внешние-сайты-с-выбранной-страницы-2)
-=======
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
+-   [Приложение 2. РУВИКИ](#приложение-2-рувики)
+-   [Приложение 3. Циклопедия](#приложение-3-циклопедия)
+    -   [Информация о статье](#информация-о-статье-3)
+    -   [Извлечь разделы статьи](#извлечь-разделы-статьи-3)
+    -   [Извлечь категории статьи](#извлечь-категории-статьи-4)
+    -   [История правок статьи](#история-правок-статьи-3)
+    -   [Список пользователей, которые правили
+        страницу](#список-пользователей-которые-правили-страницу-4)
+    -   [Список всех правок
+        пользователя](#список-всех-правок-пользователя-3)
+    -   [Поиск статей, цитирующих внешний
+        web-сайт](#поиск-статей-цитирующих-внешний-web-сайт-3)
+    -   [Поиск статей, цитирующих выбранную
+        страницу](#поиск-статей-цитирующих-выбранную-страницу-3)
+    -   [Гиперссылки из статьи, ведущие на другие статьи
+        энциклопедии](#гиперссылки-из-статьи-ведущие-на-другие-статьи-энциклопедии-3)
+    -   [Ссылки на внешние сайты с выбранной
+        страницы](#ссылки-на-внешние-сайты-с-выбранной-страницы-3)
 -   [Обратная связь](#обратная-связь)
     -   [Лицензия](#лицензия)
     -   [Позиция по поводу открытых
@@ -1781,11 +1786,7 @@ Service](https://query.wikidata.org/#SELECT%20%3Farticle%20%3Fdoi%20%0A%20WHERE%
 Созданными профилями любуемся в сервисе
 [Scholia](https://scholia.toolforge.org).
 
-<<<<<<< HEAD
 [:top:](#mediawiki-action-api)
-=======
-------------------------------------------------------------------------
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
 
 ------------------------------------------------------------------------
 
@@ -1820,14 +1821,8 @@ MediaWiki API в оригинальной Wikipedia) отсутствуют ид
 #### Извлечь разделы статьи
 
 Возвращает перечень разделов страницы, их размер, порядковые номера и
-<<<<<<< HEAD
 названия внутренних ссылок. \>
 [`https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=sections&format=json`](https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=sections&format=json)
-=======
-названия внутренних ссылок.
-
-> [`https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=sections&format=json`](https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=sections&format=json)
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
 
 Получив сведения из запроса выше, можно извлечь отдельные разделы в
 форматах wikitext или parsetree.
@@ -1914,7 +1909,6 @@ Talk:Page, 2 – Профили пользователей, 3 – личные U
 
 > [`https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=externallinks&format=json`](https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=externallinks&format=json)
 
-<<<<<<< HEAD
 [:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
@@ -2036,15 +2030,6 @@ Talk:Page, 2 – Профили пользователей, 3 – личные U
 ------------------------------------------------------------------------
 
 ## :pushpin: Приложение 3. Циклопедия
-=======
-------------------------------------------------------------------------
-
-## Приложение 2. РУВИКИ
-
-------------------------------------------------------------------------
-
-## Приложение 3. Циклопедия
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
 
 На момент подготовки статьи на сайте
 [Циклопедии](https://cyclowiki.org/) автору не удалось найти
@@ -2076,14 +2061,8 @@ MediaWiki API в оригинальной Wikipedia) отсутствуют ид
 #### Извлечь разделы статьи
 
 Возвращает перечень разделов страницы, их размер, порядковые номера и
-<<<<<<< HEAD
 названия внутренних ссылок. \>
 [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=sections&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=sections&format=json)
-=======
-названия внутренних ссылок.
-
-> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=sections&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=sections&format=json)
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
 
 Получив сведения из запроса выше, можно извлечь отдельные разделы в
 форматах wikitext или parsetree.
@@ -2144,11 +2123,7 @@ Talk:Page, 2 – Профили пользователей, 3 – личные U
 
 #### Гиперссылки из статьи, ведущие на другие статьи энциклопедии
 
-<<<<<<< HEAD
 Запрос ниже возвращает перечень статей Циклопедии, на которые ссылается
-=======
-Запрос ниже возвращает перечень статей Википедии, на которые ссылается
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
 выбранная статья.
 
 > [`https://cyclowiki.org/w/api.php?action=query&titles=Компьютерная оптика&prop=links&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=links&format=json)
@@ -2164,11 +2139,125 @@ Talk:Page, 2 – Профили пользователей, 3 – личные U
 
 > [`https://cyclowiki.org/w/api.php?action=parse&page=Компьютерная оптика&prop=externallinks&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=externallinks&format=json)
 
-<<<<<<< HEAD
 [:top:](#mediawiki-action-api)
 
-=======
->>>>>>> c34207bda6d848ce4759642e0e7501efd5b6fee7
+------------------------------------------------------------------------
+
+## Приложение 2. РУВИКИ
+
+------------------------------------------------------------------------
+
+## Приложение 3. Циклопедия
+
+На момент подготовки статьи на сайте
+[Циклопедии](https://cyclowiki.org/) автору не удалось найти
+документацию API, но поскольку Циклопедия сделана на базе MediaWiki, то
+удалось обнаружить работающие MediaWiki Action API и MediaWiki REST API.
+
+#### Информация о статье
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Китайская кошка&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&format=json)
+
+Запрос ниже возвращает более детальную json-структуру, из которой легко
+извлечь текст, категории (categories), ссылки на страницы (links),
+ссылка на внешние страницы (externallinks), перечень изображений
+(images), секций (sections), шаблонов (template), интер-вики ссылок
+(iwlinks – здесь ссылки на оригинальную Википедию и другие Викисервисы).
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&format=json)
+
+По сравнению с оригиналом (далее под оригиналом подразумевается
+MediaWiki API в оригинальной Wikipedia) отсутствуют идентификатор
+соответствующего статье элемента Викиданных (wikibase_item) и ссылки на
+языковые версии статей (раздел есть, но автор не встретил примеров
+статей, где он был бы заполнен).
+
+Версия MediWiki REST API
+
+> [`https://cyclowiki.org/w/rest.php/v1/page/Китайская кошка`](https://cyclowiki.org/w/rest.php/v1/page/%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0)
+
+#### Извлечь разделы статьи
+
+Возвращает перечень разделов страницы, их размер, порядковые номера и
+названия внутренних ссылок.
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=sections&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=sections&format=json)
+
+Получив сведения из запроса выше, можно извлечь отдельные разделы в
+форматах wikitext или parsetree.
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=wikitext|parsetree&section=5&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=wikitext%7Cparsetree&section=5&format=json)
+
+#### Извлечь категории статьи
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=categories&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=categories&format=json)
+
+Найти все статьи по категории
+
+> [`https://cyclowiki.org/w/api.php?cmtitle=Category:Сады и парки России&action=query&list=categorymembers&cmlimit=100&cmprop=title|timestamp&format=json`](https://cyclowiki.org/w/api.php?cmtitle=Category:%D0%A1%D0%B0%D0%B4%D1%8B%20%D0%B8%20%D0%BF%D0%B0%D1%80%D0%BA%D0%B8%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8&action=query&list=categorymembers&cmlimit=100&cmprop=title%7Ctimestamp&format=json)
+
+#### История правок статьи
+
+Запрос ниже возвращает информацию о 10 правках, внесенных после 01
+декабря 2022 года в статью о Китайской кошке.
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Китайская кошка&prop=revisions&rvslots=main&rvlimit=10&rvdir=newer&rvstart=2022-12-01T00:00:00Z&rvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|content|tags&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=revisions&rvslots=main&rvlimit=10&rvdir=newer&rvstart=2022-12-01T00:00:00Z&rvprop=ids%7Cflags%7Ctimestamp%7Cuser%7Cuserid%7Csize%7Ccontentmodel%7Ccomment%7Cparsedcomment%7Ccontent%7Ctags&format=json)
+
+#### Список пользователей, которые правили страницу
+
+Запрос ниже возвращает список пользователей, которые редактировали
+статью о Китайской кошке.
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Китайская кошка&prop=contributors&pclimit=200&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=contributors&pclimit=200&format=json).
+
+Чтобы получить список редакторов-ботов к запросу необходимо добавить
+&pcgroup=bot.
+
+#### Список всех правок пользователя
+
+Запрос ниже возвращает в формате json правки пользователя
+[Serebr](https://cyclowiki.org/wiki/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Serebr).
+
+> [`https://cyclowiki.org/w/api.php?action=query&list=allrevisions&arvuser=Serebr&arvslots=*&arvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|tags&format=json`](https://cyclowiki.org/w/api.php?action=query&list=allrevisions&arvuser=Serebr&arvslots=*&arvprop=ids%7Cflags%7Ctimestamp%7Cuser%7Cuserid%7Csize%7Ccontentmodel%7Ccomment%7Cparsedcomment%7Ctags&format=json)
+
+Для получения текста правок добавьте в аргумент arvprop значение
+content.
+
+#### Поиск статей, цитирующих внешний web-сайт
+
+Можно искать ссылки только в статьях определенного типа, используя
+выражение `&eunamespace=...` и определенные значения (0 – статьи, 1 –
+Talk:Page, 2 – Профили пользователей, 3 – личные User talk страницы).
+
+Запрос ниже возвращает перечень статей (namespace = 0), в которых
+присутствуют гиперссылки на сайт издательства “Медиасфера”.
+
+> [`https://cyclowiki.org/w/api.php?action=query&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0&format=json`](https://cyclowiki.org/w/api.php?action=query&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0&format=json)
+
+#### Поиск статей, цитирующих выбранную страницу
+
+Запрос ниже возвращает перечень статей, в которых присутствует
+гиперссылка на статью о Кубинской революции. \>
+[`https://cyclowiki.org/w/api.php?action=query&titles=Роза Люксембург&prop=linkshere&lhlimit=200&lhnamespace=0&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%A0%D0%BE%D0%B7%D0%B0%20%D0%9B%D1%8E%D0%BA%D1%81%D0%B5%D0%BC%D0%B1%D1%83%D1%80%D0%B3&prop=linkshere&lhlimit=200&lhnamespace=0&format=json)
+
+#### Гиперссылки из статьи, ведущие на другие статьи энциклопедии
+
+Запрос ниже возвращает перечень статей Википедии, на которые ссылается
+выбранная статья.
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Компьютерная оптика&prop=links&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=links&format=json)
+
+#### Ссылки на внешние сайты с выбранной страницы
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Компьютерная оптика&prop=extlinks&ellimit=500&elexpandurl=true&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=extlinks&ellimit=500&elexpandurl=true&format=json)
+
+Можно объединить ссылки с внутренними (на страницы энциклопедии), указав
+`prop=extlinks|links`.
+
+**\[Альтернативный способ\]**
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Компьютерная оптика&prop=externallinks&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=externallinks&format=json)
+
 ------------------------------------------------------------------------
 
 ## Обратная связь
