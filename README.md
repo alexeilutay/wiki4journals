@@ -112,6 +112,8 @@
         энциклопедии](#гиперссылки-из-статьи-ведущие-на-другие-статьи-энциклопедии)
     -   [Ссылки на внешние сайты с выбранной
         страницы](#ссылки-на-внешние-сайты-с-выбранной-страницы)
+    -   [Поиск статьи по названию](#поиск-статьи-по-названию)
+    -   [Статистика просмотров страниц](#статистика-просмотров-страниц)
 -   [:pushpin: Приложение 2. РУВИКИ](#pushpin-приложение-2-рувики)
     -   [Информация о статье](#информация-о-статье-1)
     -   [Извлечь разделы статьи](#извлечь-разделы-статьи-1)
@@ -129,6 +131,9 @@
         энциклопедии](#гиперссылки-из-статьи-ведущие-на-другие-статьи-энциклопедии-1)
     -   [Ссылки на внешние сайты с выбранной
         страницы](#ссылки-на-внешние-сайты-с-выбранной-страницы-1)
+    -   [Поиск статьи по названию](#поиск-статьи-по-названию-1)
+    -   [Статистика просмотров
+        страниц](#статистика-просмотров-страниц-1)
 -   [:pushpin: Приложение 3.
     Циклопедия](#pushpin-приложение-3-циклопедия)
     -   [Информация о статье](#информация-о-статье-2)
@@ -165,6 +170,9 @@
         энциклопедии](#гиперссылки-из-статьи-ведущие-на-другие-статьи-энциклопедии-3)
     -   [Ссылки на внешние сайты с выбранной
         страницы](#ссылки-на-внешние-сайты-с-выбранной-страницы-3)
+    -   [Поиск статьи по названию](#поиск-статьи-по-названию-2)
+    -   [Статистика просмотров
+        страниц](#статистика-просмотров-страниц-2)
 -   [Обратная связь](#обратная-связь)
     -   [Лицензия](#лицензия)
     -   [Позиция по поводу открытых
@@ -628,11 +636,14 @@ URL. Результат – скачивание текстового файла
 
 (а) **<https://www.mediawiki.org/wiki/API:Search>** – выполняет поиск
 строки, указанной в параметре (srcsearch=) по названию статьи
-(srsearch=intitle:) или тексту статьи (srsearch=text:)
+(srsearch=intitle:), тексту статьи (srsearch=text:), или начальным
+символам названия статьи (srsearch=prefix:)
 
 > [`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=nejm&utf8=&format=json`](https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=nejm&utf8=&format=json)
 
 > [`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=intitle:"Tetrahedron journal"&utf8=&format=json`](https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=intitle:%22Tetrahedron%20journal%22&utf8=&format=json)
+
+> [`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=prefix:Tetrahedron&utf8=&format=json`](https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=prefix:Tetrahedron&utf8=&format=json)
 
 Результаты можно выводить с дополнительной информацией, если
 использовать generator, в этом случае параметры будут содержать префикс
@@ -658,6 +669,12 @@ profile позволяет варьировать строгость запро�
 > [`https://en.wikipedia.org/w/api.php?action=opensearch&namespace=0&profile=fuzzy&search=The Lancet&limit=5&format=json`](https://en.wikipedia.org/w/api.php?action=opensearch&namespace=0&profile=fuzzy&search=The%20Lancet&limit=5&format=json)
 
 > [`https://ru.wikipedia.org/w/api.php?action=opensearch&namespace=0&profile=fuzzy&search=журнал общей химии&limit=5&format=json`](https://ru.wikipedia.org/w/api.php?action=opensearch&search=%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB%20%D0%BE%D0%B1%D1%89%D0%B5%D0%B9%20%D1%85%D0%B8%D0%BC%D0%B8%D0%B8&profile=fuzzy&limit=5&format=json)
+
+Альтернативный синтаксис [поиска по
+префиксу](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Bprefixsearch)
+с поддержкой неточного (fuzzy) поиска:
+
+> [`https://ru.wikipedia.org/w/api.php?action=query&list=prefixsearch&pssearch=Казахский&psprofile=fuzzy&pslimit=20&format=json`](https://ru.wikipedia.org/w/api.php?action=query&list=prefixsearch&pssearch=%D0%9A%D0%B0%D0%B7%D0%B0x%D1%81%D0%BA%D0%B8%D0%B9&psprofile=fuzzy&pslimit=20&format=json)
 
 **`Wikimedia Core REST API`**
 
@@ -804,12 +821,23 @@ content.
 
 #### Статистика просмотров страницы в Wikipedia
 
+**`MediaWiki Action API`**
+
+> [`https://en.wikipedia.org/w/api.php?action=query&titles=The_BMJ&prop=pageviews&pvipdays=60&format=json`](https://en.wikipedia.org/w/api.php?action=query&titles=The_BMJ&prop=pageviews&pvipdays=60&format=json)
+
+Показывает максимум 60 дней (pvipdays=60).
+
+**`Wikimedia REST API`**
+
 [:blue_book: Инструкция](https://wikimedia.org/api/rest_v1/)
 
 Запрос ниже возвращает количество просмотров статьи о журнале The BMJ в
-англоязычной Википедии с 01 января 2022 по 31 марта 2023 г.
+англоязычной Википедии с 01 июня по 31 июля 2023 г.
 
-> [`https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331`](https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/monthly/20220101/20230331)
+> [`https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/daily/20230601/20230731`](https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/The%20BMJ/daily/20230601/20230731)
+
+Для того, чтобы цифры совпадали с запросом MediaWiki Action API
+необходимо вместо all-agents использовать user.
 
 **Другие веб-интерфейсы:**
 
@@ -1909,6 +1937,20 @@ Talk:Page, 2 – Профили пользователей, 3 – личные U
 
 > [`https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=externallinks&format=json`](https://руни.рф/api.php?action=parse&page=%D0%9A%D1%83%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F&prop=externallinks&format=json)
 
+#### Поиск статьи по названию
+
+Для поиска по названию используется не (srsearch=intitle:), а
+(srwhat=title).
+
+[`https://руни.рф/api.php?action=query&list=search&srsearch=Казанский&srwhat=title&utf8=&format=json`](https://руни.рф/api.php?action=query&list=search&srsearch=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&srwhat=title&utf8=&format=json)
+
+#### Статистика просмотров страниц
+
+Запрос ниже возвращает ошибку
+`Unrecognized value for parameter "prop": pageviews`
+
+> [`https://руни.рф/api.php?action=query&titles=%D0%9A%D1%80%D1%8B%D0%BC&prop=pageviews&format=json`](https://руни.рф/api.php?action=query&titles=%D0%9A%D1%80%D1%8B%D0%BC&prop=pageviews&format=json)
+
 [:top:](#mediawiki-action-api)
 
 ------------------------------------------------------------------------
@@ -2024,6 +2066,20 @@ Talk:Page, 2 – Профили пользователей, 3 – личные U
 **\[Альтернативный способ\]**
 
 > [`https://ru.ruwiki.ru/w/api.php?action=parse&page=Изгнание_евреев_из_Испании&prop=externallinks&format=json`](https://ru.ruwiki.ru/w/api.php?action=parse&page=%D0%98%D0%B7%D0%B3%D0%BD%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B5%D0%B2%D1%80%D0%B5%D0%B5%D0%B2_%D0%B8%D0%B7_%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8&prop=externallinks&format=json)
+
+#### Поиск статьи по названию
+
+Для поиска по названию используется новый синтаксис (srsearch=intitle:),
+а srwhat=title не работает так же как и в оригинальной MediaWiki Action
+API.
+
+[`https://ru.ruwiki.ru/w/api.php?action=query&list=search&srsearch=intitle:Казанский&utf8=&format=json`](https://ru.ruwiki.ru/w/api.php?action=query&list=search&srsearch=intitle:%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&utf8=&format=json)
+
+#### Статистика просмотров страниц
+
+Функционал вывода количества просмотров работает, но возвращает нули.
+
+> [`https://ru.ruwiki.ru/w/api.php?action=query&titles=Крым&prop=pageviews&format=json`](https://ru.ruwiki.ru/w/api.php?action=query&titles=%D0%9A%D1%80%D1%8B%D0%BC&prop=pageviews&format=json)
 
 [:top:](#mediawiki-action-api)
 
@@ -2257,6 +2313,20 @@ Talk:Page, 2 – Профили пользователей, 3 – личные U
 **\[Альтернативный способ\]**
 
 > [`https://cyclowiki.org/w/api.php?action=parse&page=Компьютерная оптика&prop=externallinks&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=externallinks&format=json)
+
+#### Поиск статьи по названию
+
+Для поиска по названию используется не (srsearch=intitle:), а
+(srwhat=title).
+
+[`https://cyclowiki.org/w/api.php?action=query&list=search&srsearch=Казанский&srwhat=title&utf8=&format=json`](https://cyclowiki.org/w/api.php?action=query&list=search&srsearch=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&srwhat=title&utf8=&format=json)
+
+#### Статистика просмотров страниц
+
+Запрос ниже возвращает ошибку
+`Unrecognized value for parameter "prop": pageviews`
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D1%80%D1%8B%D0%BC&prop=pageviews&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D1%80%D1%8B%D0%BC&prop=pageviews&format=json)
 
 ------------------------------------------------------------------------
 
