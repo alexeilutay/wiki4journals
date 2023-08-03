@@ -1,16 +1,25 @@
 ---
-title: "Вики-сервисы для академических издателей"
+title: "Использование API и SPARQL-интерфейсов Вики-сервисов"
 author: "Лутай А.В."
 output: 
   github_document:
     toc: yes
     toc_depth: 4
-date: '2023-07-29'
+  html_document:
+    toc: yes
+    toc_depth: 4
+date: '2023-08-03'
 ---
 
-Цель этого сборника примеров -- обратить внимание на уникальные возможности API- и SPARQL-интерефейсов сервисов Wikipedia и Wikidata. Большая часть примеров тематически связана с академическими журналам, поскольку материал был написан для доклада на 11-ой Международной научно-практической конференции Ассоциации научных редакторов и издателей (АНРИ) «Научное издание международного уровня -- 2023: достижения, реалии, перспективы» (23-26 мая, 2023 г.).
+Цель этого сборника примеров -- обратить внимание на уникальные возможности API- и SPARQL-интерефейсов сервисов Wikipedia и Wikidata.
 
-Приложение 1 приводит примеры использования API [онлайн-энциклопедии Руниверсалис](https://%D1%80%D1%83%D0%BD%D0%B8.%D1%80%D1%84/), развернутой на основе MediaWiki.
+Большая часть примеров тематически связана с академическими журналами, поскольку первоначальная версия материала была подготовлена для доклада на 11-ой Международной научно-практической конференции Ассоциации научных редакторов и издателей (АНРИ) «Научное издание международного уровня -- 2023: достижения, реалии, перспективы» (23-26 мая, 2023 г.).
+
+Приведенные примеры демонстрируют лишь **малую** часть доступных возможностей -- акцент сделан на запросах, которые могут быть выполнены в веб-браузере пользователями, не имеющими опыта написания скриптов на языках программирования.
+
+Материал будет существовать в виде README страницы и продолжать пополняться новыми примерами до тех пор пока автор (или контрибьюторы) не решат, что другой формат будет удобнее.
+
+Приложения будут включать примеры использования API русскоязычных вики -- [Руниверсалис](https://%D1%80%D1%83%D0%BD%D0%B8.%D1%80%D1%84/), [РУВИКИ](https://ru.ruwiki.ru/), [Циклопедии](https://cyclowiki.org/), развернутых на базе ПО MediaWiki.Ни факт упоминания, ни порядок перечисления этих проектов не отражают предпочтений автора и не являются рекомендацией к использованию.
 
 ***
 
@@ -32,26 +41,60 @@ date: '2023-07-29'
 
 ## API и SPARQL интерфейсы
 
+:warning: MediaWiki Action API и MediaWiki REST API предоставляются со стандартной версией MediaWiki и могут быть доступны в клонах Википедий (см. Приложение 1). Остальные API доступны только для [проектов Wikimedia](https://meta.wikimedia.org/wiki/Wikimedia_projects).
+
 #### MediaWiki Action API
+
+MediaWiki Action API (/api.php) предоставляет пользователям возможности аутентификации, получения сведений о страницах, пользователях, совершенных правках, а также вносить изменений, обращаться к персональным настройкам и использовать специальные права.
 
 - [https://www.mediawiki.org/wiki/API:Main_page](https://www.mediawiki.org/wiki/API:Main_page)
 
-#### Wikipedia REST API
+Перелистывание результатов :fast_forward: 
+
+-	[https://www.mediawiki.org/wiki/API:Continue](https://www.mediawiki.org/wiki/API:Continue)
+
+Если запрос к API не срабатывает, рекомендуется добавлять в конец запроса `&origin=*`.
+
+#### MediaWiki REST API
+
+MediaWiki REST API (/rest.php) позволяет взаимодействовать с MediaWiki путем отправки HTTP запросов к rest.php адресам URL. Этот API можно использовать для скриптов для поиска и сбора сведений из страниц и иллюстраций, а также изучения истории правок. 
 
 - https://www.mediawiki.org/wiki/API:REST_API 
 - https://www.mediawiki.org/wiki/API:REST_API/Reference 
 
-Перелистывание результатов :fast_forward: 
-
--	[https://www.mediawiki.org/wiki/API:Continue](https://www.mediawiki.org/wiki/API:Continue) 
-
 #### Wikimedia REST API
+
+Wikimedia REST API (/api/rest) предоставляет доступ к контенту Wikimedia сервисов и метаданным в машиночитаемых форматах. API интегрирован с Wikimedia's globally distributed caching infrastructure и создан для обеспечения работы приложений, запрашивающих большие объемы данных.
+
+- [https://www.mediawiki.org/wiki/Wikimedia_REST_API](https://www.mediawiki.org/wiki/Wikimedia_REST_API)
+
+REST API вместе с документацией доступны для большинства главных проектов Wikimedia по адресу /api/rest_v1/. 
+
+Для всех проектов Wikimedia:
+
+- [https://wikimedia.org/api/rest_v1/#/](https://wikimedia.org/api/rest_v1/#/)
+
+Для англоязычной Wikipedia: 
 
 -	[https://en.wikipedia.org/api/rest_v1/#/](https://en.wikipedia.org/api/rest_v1/#/)
 
--	[Спецификация API в JSON](https://en.wikipedia.org/api/rest_v1/?spec) 
+-	[Спецификация API в JSON](https://en.wikipedia.org/api/rest_v1/?spec)
+
+:pushpin: Каталог новых REST API от Wikimedia (в стадии разработки):
+
+- [https://api.wikimedia.org/wiki/API_catalog](https://api.wikimedia.org/wiki/API_catalog)
+
+Стоит обратить внимание на:
+
+- **Core REST API** [https://api.wikimedia.org/wiki/Core_REST_API](https://api.wikimedia.org/wiki/Core_REST_API)
+
+- **Page Description API** [https://api.wikimedia.org/wiki/Page_Description_API](https://api.wikimedia.org/wiki/Page_Description_API)
+
+- **Feed API** [https://api.wikimedia.org/wiki/Feed_API](https://api.wikimedia.org/wiki/Feed_API)
 
 #### Wikidata API
+
+Wikidata работает на ПО Wikibase, поэтому API более правильно называть Wikibase REST API.    
 
 - [Swagger API документация](https://doc.wikimedia.org/Wikibase/master/js/rest-api/)
 
@@ -107,7 +150,7 @@ date: '2023-07-29'
 
 #### Информация о статье в Wikipedia
 
-**`Wikipedia REST API`**
+**`MediaWiki REST API`**
 
 Возвращает json-структуру, содержащую идентификатор статьи, сведения о последней правке и элемент source, в котором находится полный текст страницы в формате вики-разметки ([что такое вики-разметка?](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9A%D0%B0%D0%BA_%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8)).
 
@@ -143,7 +186,7 @@ date: '2023-07-29'
 
 Запросы ниже позволяют получить перечень всех языковых версий заданной статьи.
 
-**`Wikipedia REST API`**
+**`MediaWiki REST API`**
 
 возвращает только названия страниц
 
@@ -175,6 +218,29 @@ date: '2023-07-29'
 
 ***
 
+#### :pushpin: Получение изображений из статьи
+
+**`MediaWiki Action API`**
+
+Запрос ниже использует ранее рассмотренный механизм запроса к API [https://www.mediawiki.org/wiki/API:Query](https://www.mediawiki.org/wiki/API:Query) для получения списка всех иллюстраций из страниц русскоязычной Википедии, содержащих строку "аграрный университет":   
+
+> [`https://ru.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:"аграрный университет"&prop=info|pageimages|images&gsrlimit=20&format=json`](https://ru.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:%22%D0%B0%D0%B3%D1%80%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%22&prop=info|pageimages|images&gsrlimit=20&format=json)
+
+Расширение перечня параметров позволяет получить более широкий набор полей:
+
+- inprop=url возвращает URL на найденные статьи
+- piprop=name|original|thumbnail&pithumbsize=300 возвращает сведения (в т.ч. URL) на оригинальное изображение статьи (pageimage) и его иконке (thumbnail), автоматически увеличенной до 300 px в ширину (см. [query+pageimages](https://www.mediawiki.org/w/api.php?action=help&modules=query%2Bpageimages))
+
+[`https://ru.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:"аграрный университет"&prop=info|pageimages|images&inprop=url&piprop=original|thumbnail&pithumbsize=300&gsrlimit=50&format=json`](https://ru.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:%22%D0%B0%D0%B3%D1%80%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%22&prop=info|pageimages|images&inprop=url&piprop=original|thumbnail&pithumbsize=300&gsrlimit=50&format=json)
+
+Более полные сведения об изображениях внутри статьи (images) можно получить запросами, используя имена файлов (в примере ниже запрос для получения сведений о файле File:Moscow_08-2012_Petrovsko-Razumovskoe_img01.jpg):
+
+> [`https://www.mediawiki.org/w/api.php?action=query&titles=File:Moscow_08-2012_Petrovsko-Razumovskoe_img01.jpg&prop=imageinfo&iiprop=timestamp|url|user|extmetadata&iiextmetadatafilter=Artist|ImageDescription|GPSLatitude|GPSLongitude&format=json`](https://www.mediawiki.org/w/api.php?action=query&titles=File:Moscow_08-2012_Petrovsko-Razumovskoe_img01.jpg&prop=imageinfo&iiprop=timestamp|url|user|extmetadata&iiextmetadatafilter=Artist|ImageDescription|GPSLatitude|GPSLongitude&format=json)
+
+[:top:](#mediawiki-action-api)
+
+***
+
 ####	Извлечь разделы статьи в Wikipedia
 
 **`MediaWiki Action API`**
@@ -203,7 +269,7 @@ date: '2023-07-29'
 
 > [`https://ru.wikipedia.org/w/api.php?action=query&prop=pageprops&format=json&titles=Криосфера_Земли`](https://ru.wikipedia.org/w/api.php?action=query&prop=pageprops&format=json&titles=Криосфера_Земли)
 
-**`Wikipedia REST API`**
+**`Wikimedia REST API`**
 
 возвращает информацию о странице, в которой есть поле wikibase_item 
 
@@ -272,17 +338,69 @@ SELECT DISTINCT ?article WHERE {
 
 ***
 
+## Типовые задачи -- поиск статей и изображений
+
+#### :pushpin: Поиск статьи по названию
+
+**`MediaWiki Action API`**
+
+В MediaWiki Action API есть 2 варианта поиска по тексту :
+
+(а) **[https://www.mediawiki.org/wiki/API:Search](https://www.mediawiki.org/wiki/API:Search)** -- выполняет поиск строки, указанной в параметре (srcsearch=) по названию статьи (srsearch=intitle:) или тексту статьи (srsearch=text:)
+
+> [`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=nejm&utf8=&format=json`](https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=nejm&utf8=&format=json)
+
+> [`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=intitle:"Tetrahedron journal"&utf8=&format=json`](https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=intitle:%22Tetrahedron%20journal%22&utf8=&format=json)
+
+Результаты можно выводить с дополнительной информацией, если использовать generator, в этом случае параметры будут содержать префикс g (например: gsrsearch вместо search). В примере ниже к результатам поиска статей, содержащих в названии строку Chemical journal добавлены сведения (prop=) о статьи, категориях, внутренних и внешних ссылках.  
+
+> [`https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:%22Chemical%20journal%22&prop=info|categories|links|extlinks&utf8=&gsrlimit=100&format=json`](https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:%22Chemical%20journal%22&prop=info|categories|links|extlinks&utf8=&gsrlimit=100&format=json)
+
+(б) **[https://www.mediawiki.org/wiki/API:Opensearch](https://www.mediawiki.org/wiki/API:Opensearch)** -- выполняет поиск строки, указанной в параметре (search=) по тексту статьи в формате [Open Search](https://en.wikipedia.org/wiki/OpenSearch). Параметр profile позволяет варьировать строгость запроса от strict до fuzzy (по умолчанию -- поисковик сам выбирает формат поиска).
+
+Возвращает результаты в виде 3 списков: 
+
+- названия страниц
+- [пустой блок, где должны были быть descriptions](https://phabricator.wikimedia.org/T241437),
+- URL страниц
+
+> [`https://en.wikipedia.org/w/api.php?action=opensearch&namespace=0&profile=fuzzy&search=The Lancet&limit=5&format=json`](https://en.wikipedia.org/w/api.php?action=opensearch&namespace=0&profile=fuzzy&search=The%20Lancet&limit=5&format=json)
+
+> [`https://ru.wikipedia.org/w/api.php?action=opensearch&namespace=0&profile=fuzzy&search=журнал общей химии&limit=5&format=json`](https://ru.wikipedia.org/w/api.php?action=opensearch&search=%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB%20%D0%BE%D0%B1%D1%89%D0%B5%D0%B9%20%D1%85%D0%B8%D0%BC%D0%B8%D0%B8&profile=fuzzy&limit=5&format=json)
+
+**`Wikimedia Core REST API`**
+
+Новый Core REST API позволяет проводить текстовый поиск:
+
+- по названию [https://api.wikimedia.org/wiki/Core_REST_API/Reference/Search/Search_titles](https://api.wikimedia.org/wiki/Core_REST_API/Reference/Search/Search_titles)
+
+> [`https://api.wikimedia.org/core/v1/wikipedia/ru/search/title?q=институт физической химии&limit=10`](https://api.wikimedia.org/core/v1/wikipedia/ru/search/title?q=%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%20%D1%84%D0%B8%D0%B7%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9%20%D1%85%D0%B8%D0%BC%D0%B8%D0%B8&limit=10) 
+
+- по полному тексту [https://api.wikimedia.org/wiki/Core_REST_API/Reference/Search/Search_content](https://api.wikimedia.org/wiki/Core_REST_API/Reference/Search/Search_content) 
+
+> [`https://api.wikimedia.org/core/v1/wikipedia/en/search/page?q=the%20lancet&limit=10`](https://api.wikimedia.org/core/v1/wikipedia/en/search/page?q=the%20lancet&limit=10)
+
+Поиск имеет универсальный синтаксис и позволяет проводить поиск по широкому перечню [проектов Wikimedia](https://api.wikimedia.org/wiki/Wikimedia_projects) -- например, по wikipedia (статьи), по commons (иллюстрации, аудио, видео), по wiktionary (словарные записи).
+
+[:top:](#mediawiki-action-api)
+
+#### :pushpin: Поиск изображений по названию
+
+Поиск по названию изображений выполняется так:  
+
+> [`https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:"аграрный университет"&prop=info|imageinfo|redirects&inprop=url&gsrnamespace=6&iiprop=timestamp|url|user|extmetadata&iiextmetadatafilter=Artist|ImageDescription|GPSLatitude|GPSLongitude&redirects=&format=json&gsrlimit=20`](https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=intitle:%22%D0%B0%D0%B3%D1%80%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%22&prop=info|imageinfo|redirects&inprop=url&gsrnamespace=6&iiprop=timestamp|url|user|extmetadata&iiextmetadatafilter=Artist|ImageDescription|GPSLatitude|GPSLongitude&redirects=&format=json&gsrlimit=20)
+
+Запрос выше возвращает изображения, содержащие "аграрный университет" в названии. 
+
+[:top:](#mediawiki-action-api)
+
+***
+
 ## Типовые задачи -- правки и просмотры
 
 Правки в статьи Википедию и в записи Викиданных могут вносить люди и боты, но история всех изменений доступна для просмотра. Подобная прозрачность, в сочетании с правилами противодействия [Вандализму](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%92%D0%B0%D0%BD%D0%B4%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC), [Войнам правок](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D0%BA) и другим негативным проявлениям человеческого несогласия, повышают доверие читателей.
 
 #### История правок статьи в Wikipedia
-
-**`Wikimedia REST API`**
-
-Запрос ниже возвращает последнюю правку и имя последнего пользователя
-
-> [`https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук`](https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук)
 
 **`MediaWiki Action API`**
 
@@ -292,7 +410,7 @@ SELECT DISTINCT ?article WHERE {
 
 > [`https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Lancet&rvslots=main&rvlimit=5&rvdir=newer&rvstart=2021-01-01T00:00:00Z&rvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|content|tags|flagged&format=json`](https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Lancet&rvslots=main&rvlimit=5&rvdir=newer&rvstart=2021-01-01T00:00:00Z&rvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|content|tags|flagged&format=json)
 
-**`Wikipedia REST API`**
+**`MediaWiki REST API`**
 
 Запрос возвращает историю правок с id изменения, временем правки, данными о создателе (id, name), размером изменений (delta) и сопутствующими комментариями.
 
@@ -311,7 +429,7 @@ SELECT DISTINCT ?article WHERE {
 
 **Количество правок**
 
-:warning: В названии страницы необходимо предварительно заменить пробелы на _ (вместо The BMJ, не The%20BMJ, а The_BMJ) -- в сведениях о странице, возвращаемых Wikipedia REST API ([пример](https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ)), название в необходимом формате находится в поле key. В противном случае запрос вернет ошибку. 
+:warning: В названии страницы необходимо предварительно заменить пробелы на _ (вместо The BMJ, не The%20BMJ, а The_BMJ) -- в сведениях о странице, возвращаемых MediaWiki REST API ([пример](https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ)), название в необходимом формате находится в поле key. В противном случае запрос вернет ошибку. 
 
 > [`https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/edits`](https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/edits)
 
@@ -321,6 +439,13 @@ SELECT DISTINCT ?article WHERE {
 
 > [`https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/editors`](https://en.wikipedia.org/w/rest.php/v1/page/The_BMJ/history/counts/editors)
 
+**`Wikimedia REST API`**
+
+Запрос ниже возвращает последнюю правку и имя последнего пользователя
+
+> [`https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук`](https://ru.wikipedia.org/api/rest_v1/page/title/Доклады%20Академии%20наук)
+
+Синтаксис запросов в Wikimedia Core REST API -- [https://api.wikimedia.org/wiki/Core_REST_API/Reference/Revisions/Get_page_history](https://api.wikimedia.org/wiki/Core_REST_API/Reference/Revisions/Get_page_history)
 
 [:top:](#mediawiki-action-api)
 
@@ -1155,7 +1280,7 @@ SELECT ?article ?doi
 
 ## Приложение 1. Энциклопедия Руниверсалис
 
-На момент подготовки статьи на сайте [Энциклопедии Руниверсалис](https://%D1%80%D1%83%D0%BD%D0%B8.%D1%80%D1%84/) автору не удалось найти документацию API, но администраторы ТГ-канала указали, что MediaWiki API работает.
+На момент подготовки статьи на сайте [Энциклопедии Руниверсалис](https://%D1%80%D1%83%D0%BD%D0%B8.%D1%80%D1%84/) автору не удалось найти документацию API, но администраторы ТГ-канала указали, что MediaWiki API работает. Удалось обнаружить работающий MediaWiki Action API
 
 #### Информация о статье
 
@@ -1241,6 +1366,101 @@ SELECT ?article ?doi
 
 ***
 
+## Приложение 2. РУВИКИ
+
+
+
+***
+
+## Приложение 3. Циклопедия
+
+На момент подготовки статьи на сайте [Циклопедии](https://cyclowiki.org/) автору не удалось найти документацию API, но поскольку Циклопедия сделана на базе MediaWiki, то удалось обнаружить работающие MediaWiki Action API и MediaWiki REST API.
+
+#### Информация о статье
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Китайская кошка&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&format=json)
+
+Запрос ниже возвращает более детальную json-структуру, из которой легко извлечь текст, категории (categories), ссылки на страницы (links), ссылка на внешние страницы (externallinks), перечень изображений (images), секций (sections), шаблонов (template), интер-вики ссылок (iwlinks -- здесь ссылки на оригинальную Википедию и другие Викисервисы).
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&format=json)
+
+По сравнению с оригиналом (далее под оригиналом подразумевается MediaWiki API в оригинальной Wikipedia) отсутствуют идентификатор соответствующего статье элемента Викиданных  (wikibase_item) и ссылки на языковые версии статей (раздел есть, но автор не встретил примеров статей, где он был бы заполнен).
+
+Версия MediWiki REST API 
+
+> [`https://cyclowiki.org/w/rest.php/v1/page/Китайская кошка`](https://cyclowiki.org/w/rest.php/v1/page/%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0)
+
+####	Извлечь разделы статьи
+
+Возвращает перечень разделов страницы, их размер, порядковые номера и названия внутренних ссылок. 
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=sections&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=sections&format=json)
+
+Получив сведения из запроса выше, можно извлечь отдельные разделы в форматах wikitext или parsetree.
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=wikitext|parsetree&section=5&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=wikitext|parsetree&section=5&format=json)
+
+#### Извлечь категории статьи
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Китайская кошка&prop=categories&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=categories&format=json)
+
+Найти все статьи по категории
+
+> [`https://cyclowiki.org/w/api.php?cmtitle=Category:Сады и парки России&action=query&list=categorymembers&cmlimit=100&cmprop=title|timestamp&format=json`](https://cyclowiki.org/w/api.php?cmtitle=Category:%D0%A1%D0%B0%D0%B4%D1%8B%20%D0%B8%20%D0%BF%D0%B0%D1%80%D0%BA%D0%B8%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8&action=query&list=categorymembers&cmlimit=100&cmprop=title|timestamp&format=json)
+
+#### История правок статьи
+
+Запрос ниже возвращает информацию о 10 правках, внесенных после 01 декабря 2022 года в статью о Китайской кошке.
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Китайская кошка&prop=revisions&rvslots=main&rvlimit=10&rvdir=newer&rvstart=2022-12-01T00:00:00Z&rvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|content|tags&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=revisions&rvslots=main&rvlimit=10&rvdir=newer&rvstart=2022-12-01T00:00:00Z&rvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|content|tags&format=json)
+
+#### Список пользователей, которые правили страницу
+
+Запрос ниже возвращает список пользователей, которые редактировали статью о Китайской кошке.
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Китайская кошка&prop=contributors&pclimit=200&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&prop=contributors&pclimit=200&format=json).
+
+Чтобы получить список редакторов-ботов к запросу необходимо добавить &pcgroup=bot.
+
+#### Список всех правок пользователя 
+
+Запрос ниже возвращает в формате json правки пользователя [Serebr](https://cyclowiki.org/wiki/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Serebr).
+
+> [`https://cyclowiki.org/w/api.php?action=query&list=allrevisions&arvuser=Serebr&arvslots=*&arvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|tags&format=json`](https://cyclowiki.org/w/api.php?action=query&list=allrevisions&arvuser=Serebr&arvslots=*&arvprop=ids|flags|timestamp|user|userid|size|contentmodel|comment|parsedcomment|tags&format=json)
+
+Для получения текста правок добавьте в аргумент arvprop значение content.
+
+#### Поиск статей, цитирующих внешний web-сайт 
+
+Можно искать ссылки только в статьях определенного типа, используя выражение `&eunamespace=...` и определенные значения (0 -- статьи, 1 -- Talk:Page, 2 -- Профили пользователей, 3 -- личные User talk страницы).
+
+Запрос ниже возвращает перечень статей (namespace = 0), в которых присутствуют гиперссылки на сайт издательства "Медиасфера".  
+
+> [`https://cyclowiki.org/w/api.php?action=query&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0&format=json`](https://cyclowiki.org/w/api.php?action=query&list=exturlusage&euquery=www.mediasphera.ru&eunamespace=0&format=json)
+
+#### Поиск статей, цитирующих выбранную страницу
+
+Запрос ниже возвращает перечень статей, в которых присутствует гиперссылка на статью о Кубинской революции. 
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Роза Люксембург&prop=linkshere&lhlimit=200&lhnamespace=0&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%A0%D0%BE%D0%B7%D0%B0%20%D0%9B%D1%8E%D0%BA%D1%81%D0%B5%D0%BC%D0%B1%D1%83%D1%80%D0%B3&prop=linkshere&lhlimit=200&lhnamespace=0&format=json)
+
+#### Гиперссылки из статьи, ведущие на другие статьи энциклопедии  
+
+Запрос ниже возвращает перечень статей Википедии, на которые ссылается выбранная статья. 
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Компьютерная оптика&prop=links&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=links&format=json)
+
+#### Ссылки на внешние сайты с выбранной страницы
+
+> [`https://cyclowiki.org/w/api.php?action=query&titles=Компьютерная оптика&prop=extlinks&ellimit=500&elexpandurl=true&format=json`](https://cyclowiki.org/w/api.php?action=query&titles=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=extlinks&ellimit=500&elexpandurl=true&format=json)
+
+Можно объединить ссылки с внутренними (на страницы энциклопедии), указав `prop=extlinks|links`.
+
+**[Альтернативный способ]**
+
+> [`https://cyclowiki.org/w/api.php?action=parse&page=Компьютерная оптика&prop=externallinks&format=json`](https://cyclowiki.org/w/api.php?action=parse&page=%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0&prop=externallinks&format=json)
+
+***
+
 ## Обратная связь
 
 Если сделаете pull request, постараюсь принять.  
@@ -1249,6 +1469,10 @@ SELECT ?article ?doi
 
 Знание -- людям!
 
-#### Позиция по поводу Википедии
+#### Позиция по поводу открытых энциклопедий
 
 Я убежден в том, что возможности оригинальных Вики-сервисов (Wikipedia, Wikidata и др.) следует изучать прежде всего для того, чтобы знать "как оно может быть". Надеюсь, что после ознакомления с перечисленными в данном материале возможностями Вики-сервисов, читатели смогут по-новому взглянуть на практическую ценность любых других онлайн-ресурсов (особенно тех, которыми предлагается импортозамещать Wikipedia).
+
+#### Отказ от ответственности
+
+На момент опубликования материала автор не осведомлен о каких-либо ограничениях, касающихся использования перечисленных ресурсов. Автор не может судить о наличии в упоминаемых онлайн-ресурсах сведений, которые могут рассматриваться как порочащие или ложные. Материал не является рекламой и предназначен для половозрелых благоразумных людей, которые сами смогут решить who is who.
