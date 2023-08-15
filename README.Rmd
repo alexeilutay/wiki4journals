@@ -8,7 +8,7 @@ output:
   html_document:
     toc: yes
     toc_depth: 4
-date: '2023-08-13'
+date: '2023-08-15'
 ---
 
 Цель этого сборника примеров -- обратить внимание на уникальные возможности API- и SPARQL-интерефейсов сервисов Wikipedia и Wikidata.
@@ -137,6 +137,8 @@ Wikidata работает на ПО Wikibase, поэтому API более пр
 ## Материалы на русском языке 
 
 **Базовые сведения:**
+
+- [Введение в Википедию](https://ru.wikimedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8E.pdf) -- Козловский С.А., Цапенко А.М., Жуков Д.А., Медейко В.В., Рожков Д.В. Введение в Википедию : учебно-методическое пособие. / Под общ. ред. С. А. Козловского. — М.: Викимедиа РУ, 2022. — 246 с. ISBN 978-5-99017-536-5
 
 - [Статья "Викиданные" в Викитеке](https://ru.wikisource.org/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0:%D0%92%D0%B8%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5)
 
@@ -1794,6 +1796,16 @@ SELECT ?article ?doi
 
 - [http://neerc.ifmo.ru/wiki/](http://neerc.ifmo.ru/wiki/) -- Викиконспекты студентов кафедры компьютерных технологий Университета ИТМО. API: http://neerc.ifmo.ru/wiki/api.php.
 
+- [https://wiki.mipt.tech](https://wiki.mipt.tech) -- ВикиФизтех. API: https://wiki.mipt.tech/api.php.
+
+- [http://wiki.mephist.ru](http://wiki.mephist.ru) -- Энциклопедия МИФИ. API: http://wiki.mephist.ru/api.php.
+
+- [https://wiki.spbu.ru](https://wiki.spbu.ru) -- Энциклопедия СпБУ. API: https://wiki.spbu.ru/api.php.
+
+- [http://wiki.fa100.ru](http://wiki.fa100.ru) -- Энциклопедия Финансового университета: Годы и люди. База данных биографий, созданная на основании печатных и электронных источников, а также материалов, предоставленных самими выпускниками. API: http://wiki.fa100.ru/api.php.
+
+- [http://wiki.cs.hse.ru](http://wiki.cs.hse.ru) --  Wiki Факультета компьютерных наук ВШЭ. API: http://wiki.cs.hse.ru/api.php.
+
 - [https://wikireshebnik.org](https://wikireshebnik.org) -- Викирешебник (сборник ответов, решений, объяснений всех задач и упражнений). API: https://wikireshebnik.org/w/api.php.
 
 #### Региональные порталы
@@ -1805,6 +1817,8 @@ SELECT ?article ?doi
 - [https://towiki.ru](https://towiki.ru) -- Томская вики. API: https://towiki.ru/api.php.
 
 - [http://wiki.tgl.net.ru](http://wiki.tgl.net.ru) -- Тольяттинский вики-портал. API: http://wiki.tgl.net.ru/api.php.
+
+- [http://лебедянь.рф](http://%D0%BB%D0%B5%D0%B1%D0%B5%D0%B4%D1%8F%D0%BD%D1%8C.%D1%80%D1%84/) -- Лебедянская энциклопедия. API: http://лебедянь.рф/api.php.
 
 - [https://kraeved.vp43.ru](https://kraeved.vp43.ru) -- Вики-поляны (открытый сетевой краеведческий проект о южной Вятке). API: https://kraeved.vp43.ru/api.php.
 
@@ -1818,9 +1832,15 @@ SELECT ?article ?doi
 
 - [https://ru.migrapedia.org](https://ru.migrapedia.org) -- большой миграционный справочник. API: https://ru.migrapedia.org/api.php.
 
+- [https://hitchwiki.org/ru/](https://hitchwiki.org/ru/) -- АвтостопВики. API: https://hitchwiki.org/ru/api.php.
+
 - [http://provizorii.ru](http://provizorii.ru/) -- свободный энциклопедический интернет-проект на русском языке, посвящённый широкой тематике. Первоначально базировался на статьях о филателии. API: http://provizorii.ru/w/api.php.
 
 - [https://bikeswiki.ru](https://bikeswiki.ru/) -- Энциклопедия японских мотоциклов. API: https://bikeswiki.ru/api.php.
+
+- [https://bikerwiki.ru](https://bikerwiki.ru/) -- Энциклопедия и путеводитель по миру мотоциклистов. API: https://bikerwiki.ru/api.php.
+
+- [https://wiki.nashtransport.ru](https://wiki.nashtransport.ru) -- Энциклопедия нашего транспорта. API: https://wiki.nashtransport.ru/api.php.
 
 - [https://wiki.zr.ru](https://wiki.zr.ru) -- Энциклопедия журнала "За рулём". API: https://wiki.zr.ru/api.php.
 
@@ -1829,6 +1849,8 @@ SELECT ?article ?doi
 - [https://greenwiki.ru](https://greenwiki.ru) -- Интернет-журнал о сельском хозяйстве основанный на авторитетных источниках. API: https://greenwiki.ru/api.php.
 
 - [https://libnotes.org](https://libnotes.org) -- Нотный архив музыки академического направления. API: https://libnotes.org/api.php.
+
+- [http://www.choirwiki.com](http://www.choirwiki.com) -- Хоровая энциклопедия. API: http://www.choirwiki.com/api.php.
 
 - [http://wiki.risk.ru](http://wiki.risk.ru/) -- Живая Энциклопедия Приключений (сведения о местах, людях, маршрутах, снаряжении, технологиях и материалах). API: http://wiki.risk.ru/api.php.
 
@@ -1849,6 +1871,10 @@ SELECT ?article ?doi
 - [https://wikireality.ru](https://wikireality.ru) -- Викиреальность ("интеллектуальный клуб", работающий над свободной энциклопедией об Интернете). API: https://wikireality.ru/w/api.php.
 
 - [http://wikicompromat.org](http://wikicompromat.org). API: http://wikicompromat.org/w/api.php.
+
+- [https://bard-wiki.net](https://bard-wiki.net). Бард-Вики. API: https://bard-wiki.net/api.php.
+
+- [https://wikilivres.ru](https://wikilivres.ru). Викиливр.ру -- свободная библиотека. API: https://wikilivres.ru/api.php.
 
 #### Вики-сообщества на Fandom
 
@@ -1932,7 +1958,11 @@ SELECT ?article ?doi
 
 - [https://www.wikicu.com](https://www.wikicu.com) -- WikiCU is a wiki with articles related to Columbia University and its neighborhood. It is effectively an insider's guide to Columbia University. API: https://www.wikicu.com/api.php.
 
+- [https://soil.evs.buffalo.edu](https://soil.evs.buffalo.edu) -- Soil Ecology Wiki. API: https://soil.evs.buffalo.edu/api.php.
+
 - [https://www.wikilawschool.net](https://www.wikilawschool.net) -- Wiki Law School: open and free collaborative outlines, case briefs, treatises, and more created for and by law students and legal professionals. API: https://www.wikilawschool.net/w/api.php.
+
+- [https://wiki.opensourceecology.org](https://wiki.opensourceecology.org) -- Open Source Ecology: a public organization that envisions collaborative design for a transparent and inclusive economy of abundance. OSE is an education organization that hosts immersion workshops and training programs on hands-on, applied skills to design and build just about anything. API: https://wiki.opensourceecology.org/api.php.
 
 - [https://www.sourcewatch.org](https://www.sourcewatch.org) -- The Center for Media and Democracy publishes SourceWatch to track corporations. We provide well-documented information about corporate public relations (PR) campaigns, including corporate front groups, people who "front" corporate campaigns, and PR operations. API: https://www.sourcewatch.org/api.php.
 
